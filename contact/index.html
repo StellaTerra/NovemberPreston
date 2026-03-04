@@ -4,52 +4,92 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Contact and Scheduling | November Preston, LMFT</title>
+  <title>Contact Queer Somatic Therapist in California | November Preston, LMFT</title>
   <meta name="description"
     content="Contact November Preston, LMFT for queer-affirming somatic therapy in California. Schedule a free 20-minute consult through SimplePractice.">
-  <link rel="canonical" href="https://www.novemberpreston.com/contact">
+  <link rel="canonical" href="https://novemberpreston.com/contact/">
   <meta property="og:type" content="website">
   <meta property="og:site_name" content="November Preston, LMFT">
-  <meta property="og:title" content="Contact and Scheduling | November Preston, LMFT">
+  <meta property="og:title" content="Contact Queer Somatic Therapist in California | November Preston, LMFT">
   <meta property="og:description"
     content="Request a free consultation through SimplePractice and review direct contact details for the practice.">
-  <meta property="og:url" content="https://www.novemberpreston.com/contact">
-  <meta property="og:image" content="https://www.novemberpreston.com/assets/portrait.jpg">
+  <meta property="og:url" content="https://novemberpreston.com/contact/">
+  <meta property="og:image" content="https://novemberpreston.com/assets/portrait.jpg">
+  <meta property="og:image:alt" content="Portrait of therapist November Preston">
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="Contact and Scheduling | November Preston, LMFT">
+  <meta name="twitter:title" content="Contact Queer Somatic Therapist in California | November Preston, LMFT">
   <meta name="twitter:description"
     content="Book a consult through SimplePractice or contact the practice by email and phone.">
-  <meta name="twitter:image" content="https://www.novemberpreston.com/assets/portrait.jpg">
+  <meta name="twitter:image" content="https://novemberpreston.com/assets/portrait.jpg">
+  <meta name="twitter:image:alt" content="Portrait of therapist November Preston">
   <script type="application/ld+json">
     {
       "@context": "https://schema.org",
       "@graph": [
         {
+          "@type": "WebSite",
+          "@id": "https://novemberpreston.com/#website",
+          "url": "https://novemberpreston.com/",
+          "name": "November Preston, LMFT",
+          "inLanguage": "en-US"
+        },
+        {
           "@type": "Person",
-          "@id": "https://www.novemberpreston.com/#person",
+          "@id": "https://novemberpreston.com/#person",
           "name": "November Preston",
           "jobTitle": "Licensed Marriage and Family Therapist",
           "telephone": "+1-510-214-3389",
           "email": "therapy@novemberpreston.com",
-          "url": "https://www.novemberpreston.com/",
-          "image": "https://www.novemberpreston.com/assets/portrait.jpg"
+          "url": "https://novemberpreston.com/",
+          "image": "https://novemberpreston.com/assets/portrait.jpg"
         },
         {
           "@type": "ProfessionalService",
-          "@id": "https://www.novemberpreston.com/#service",
+          "@id": "https://novemberpreston.com/#service",
           "name": "November Preston, LMFT",
-          "url": "https://www.novemberpreston.com/",
+          "url": "https://novemberpreston.com/",
           "description": "Queer-affirming, trauma-informed somatic psychotherapy with telehealth across California and ecotherapy options in the East Bay.",
           "telephone": "+1-510-214-3389",
           "email": "therapy@novemberpreston.com",
-          "areaServed": "California",
+          "areaServed": [
+            {
+              "@type": "State",
+              "name": "California"
+            },
+            {
+              "@type": "Place",
+              "name": "East Bay, San Francisco Bay Area"
+            }
+          ],
           "serviceType": [
             "Somatic psychotherapy",
             "Trauma-informed therapy",
             "Ecotherapy"
           ],
+          "contactPoint": [
+            {
+              "@type": "ContactPoint",
+              "contactType": "Consultation",
+              "telephone": "+1-510-214-3389",
+              "email": "therapy@novemberpreston.com",
+              "areaServed": "US-CA",
+              "availableLanguage": "en"
+            }
+          ],
           "founder": {
-            "@id": "https://www.novemberpreston.com/#person"
+            "@id": "https://novemberpreston.com/#person"
+          }
+        },
+        {
+          "@type": "ContactPage",
+          "@id": "https://novemberpreston.com/contact/#webpage",
+          "url": "https://novemberpreston.com/contact/",
+          "name": "Contact and Consultation Scheduling",
+          "isPartOf": {
+            "@id": "https://novemberpreston.com/#website"
+          },
+          "about": {
+            "@id": "https://novemberpreston.com/#service"
           }
         }
       ]
@@ -80,7 +120,7 @@
     <section class="section hero" aria-labelledby="contact-title">
       <div class="container page-intro">
         <p class="eyebrow">Contact and scheduling</p>
-        <h1 id="contact-title">Request a consult</h1>
+        <h1 id="contact-title">Contact and Consultation Scheduling</h1>
         <p>
           The fastest path is the secure SimplePractice scheduler below. You can also reach out directly by email or
           phone for questions before booking.
@@ -117,11 +157,11 @@
       <div class="container cta-panel">
         <h2 id="contact-next-title">Before booking</h2>
         <p>
-          You can review practical details on the <a href="../faq/">FAQ page</a> or learn more about clinical fit on
-          <a href="../about/">About</a>.
+          You can review practical details on the <a href="../faq/">therapy rates and insurance FAQ</a> or learn more
+          about clinical fit on the <a href="../about/">somatic therapy approach page</a>.
         </p>
         <div class="button-row">
-          <a class="btn btn-secondary" href="../faq/">FAQ</a>
+          <a class="btn btn-secondary" href="../faq/">Rates and insurance FAQ</a>
           <a class="btn btn-secondary" href="../about/">About the practice</a>
         </div>
       </div>
@@ -141,7 +181,7 @@
     </div>
   </footer>
 
-  <script src="https://widget-cdn.simplepractice.com/assets/integration-1.0.js"></script>
+  <script src="../simplepractice-loader.js" defer></script>
 </body>
 
 </html>

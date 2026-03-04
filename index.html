@@ -7,49 +7,89 @@
   <title>Queer Somatic Therapy in California | November Preston, LMFT</title>
   <meta name="description"
     content="Queer-affirming, trauma-informed somatic therapy for California adults. Telehealth statewide, with East Bay ecotherapy options and free 20-minute consultations.">
-  <link rel="canonical" href="https://www.novemberpreston.com/">
+  <link rel="canonical" href="https://novemberpreston.com/">
   <meta property="og:type" content="website">
   <meta property="og:site_name" content="November Preston, LMFT">
   <meta property="og:title" content="Queer Somatic Therapy in California | November Preston, LMFT">
   <meta property="og:description"
     content="Queer and trans affirming somatic psychotherapy with telehealth statewide in California and optional East Bay ecotherapy sessions.">
-  <meta property="og:url" content="https://www.novemberpreston.com/">
-  <meta property="og:image" content="https://www.novemberpreston.com/assets/portrait.jpg">
+  <meta property="og:url" content="https://novemberpreston.com/">
+  <meta property="og:image" content="https://novemberpreston.com/assets/portrait.jpg">
+  <meta property="og:image:alt" content="Portrait of therapist November Preston smiling">
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="Queer Somatic Therapy in California | November Preston, LMFT">
   <meta name="twitter:description"
     content="Somatic psychotherapy for queer and trans adults across California, with East Bay nature-based session options.">
-  <meta name="twitter:image" content="https://www.novemberpreston.com/assets/portrait.jpg">
+  <meta name="twitter:image" content="https://novemberpreston.com/assets/portrait.jpg">
+  <meta name="twitter:image:alt" content="Portrait of therapist November Preston smiling">
   <script type="application/ld+json">
     {
       "@context": "https://schema.org",
       "@graph": [
         {
+          "@type": "WebSite",
+          "@id": "https://novemberpreston.com/#website",
+          "url": "https://novemberpreston.com/",
+          "name": "November Preston, LMFT",
+          "inLanguage": "en-US"
+        },
+        {
           "@type": "Person",
-          "@id": "https://www.novemberpreston.com/#person",
+          "@id": "https://novemberpreston.com/#person",
           "name": "November Preston",
           "jobTitle": "Licensed Marriage and Family Therapist",
           "telephone": "+1-510-214-3389",
           "email": "therapy@novemberpreston.com",
-          "url": "https://www.novemberpreston.com/",
-          "image": "https://www.novemberpreston.com/assets/portrait.jpg"
+          "url": "https://novemberpreston.com/",
+          "image": "https://novemberpreston.com/assets/portrait.jpg"
         },
         {
           "@type": "ProfessionalService",
-          "@id": "https://www.novemberpreston.com/#service",
+          "@id": "https://novemberpreston.com/#service",
           "name": "November Preston, LMFT",
-          "url": "https://www.novemberpreston.com/",
+          "url": "https://novemberpreston.com/",
           "description": "Queer-affirming, trauma-informed somatic psychotherapy with telehealth across California and ecotherapy options in the East Bay.",
           "telephone": "+1-510-214-3389",
           "email": "therapy@novemberpreston.com",
-          "areaServed": "California",
+          "areaServed": [
+            {
+              "@type": "State",
+              "name": "California"
+            },
+            {
+              "@type": "Place",
+              "name": "East Bay, San Francisco Bay Area"
+            }
+          ],
           "serviceType": [
             "Somatic psychotherapy",
             "Trauma-informed therapy",
             "Ecotherapy"
           ],
+          "contactPoint": [
+            {
+              "@type": "ContactPoint",
+              "contactType": "Consultation",
+              "telephone": "+1-510-214-3389",
+              "email": "therapy@novemberpreston.com",
+              "areaServed": "US-CA",
+              "availableLanguage": "en"
+            }
+          ],
           "founder": {
-            "@id": "https://www.novemberpreston.com/#person"
+            "@id": "https://novemberpreston.com/#person"
+          }
+        },
+        {
+          "@type": "WebPage",
+          "@id": "https://novemberpreston.com/#webpage",
+          "url": "https://novemberpreston.com/",
+          "name": "Queer Somatic Therapy in California",
+          "isPartOf": {
+            "@id": "https://novemberpreston.com/#website"
+          },
+          "about": {
+            "@id": "https://novemberpreston.com/#service"
           }
         }
       ]
@@ -96,7 +136,9 @@
 
         <figure class="hero-portrait">
           <img src="assets/portrait.jpg" alt="Portrait of therapist November Preston smiling" width="1164" height="1200"
-            loading="eager">
+            srcset="assets/portrait-640.jpg 621w, assets/portrait-960.jpg 931w, assets/portrait.jpg 1164w"
+            sizes="(max-width: 52rem) 92vw, (max-width: 64rem) 45vw, 24.5rem"
+            loading="eager" decoding="async" fetchpriority="high">
           <figcaption>November Preston, LMFT #119501</figcaption>
         </figure>
       </div>
@@ -131,7 +173,8 @@
 
     <section class="nature-band" aria-labelledby="nature-title">
       <img class="nature-band-image" src="assets/trail-panorama.webp" alt="Open East Bay trail at sunrise" width="2500"
-        height="852" loading="lazy">
+        height="852" srcset="assets/trail-panorama-640.webp 640w, assets/trail-panorama-1200.webp 1200w, assets/trail-panorama-1800.webp 1800w, assets/trail-panorama.webp 2500w"
+        sizes="100vw" loading="lazy" decoding="async">
       <div class="container nature-band-content">
         <h2 id="nature-title">Nature as regulation, reflection, and perspective</h2>
         <p>
@@ -168,7 +211,7 @@
         <div class="card-grid">
           <article class="card">
             <h3>Do you take insurance?</h3>
-            <p>Out-of-network superbills are available. Full details are on the <a href="./faq/">FAQ page</a>.</p>
+            <p>Out-of-network superbills are available. Full details are on the <a href="./faq/">therapy rates and insurance FAQ</a>.</p>
           </article>
           <article class="card">
             <h3>Do you offer sliding scale?</h3>
@@ -213,7 +256,7 @@
     </div>
   </footer>
 
-  <script src="https://widget-cdn.simplepractice.com/assets/integration-1.0.js"></script>
+  <script src="simplepractice-loader.js" defer></script>
 </body>
 
 </html>

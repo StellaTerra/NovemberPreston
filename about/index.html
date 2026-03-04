@@ -7,49 +7,89 @@
   <title>About November Preston, LMFT | Queer Somatic Therapist</title>
   <meta name="description"
     content="Learn about November Preston, LMFT: queer-affirming, trauma-informed somatic therapist offering California telehealth and East Bay ecotherapy options.">
-  <link rel="canonical" href="https://www.novemberpreston.com/about">
+  <link rel="canonical" href="https://novemberpreston.com/about/">
   <meta property="og:type" content="website">
   <meta property="og:site_name" content="November Preston, LMFT">
   <meta property="og:title" content="About November Preston, LMFT | Queer Somatic Therapist">
   <meta property="og:description"
     content="Background, clinical approach, and trainings for November Preston's queer and trans affirming somatic psychotherapy practice.">
-  <meta property="og:url" content="https://www.novemberpreston.com/about">
-  <meta property="og:image" content="https://www.novemberpreston.com/assets/portrait-vertical.webp">
+  <meta property="og:url" content="https://novemberpreston.com/about/">
+  <meta property="og:image" content="https://novemberpreston.com/assets/portrait.jpg">
+  <meta property="og:image:alt" content="Portrait of therapist November Preston outdoors">
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="About November Preston, LMFT | Queer Somatic Therapist">
   <meta name="twitter:description"
     content="Read about November Preston's approach, values, and training in trauma-informed somatic therapy and ecotherapy.">
-  <meta name="twitter:image" content="https://www.novemberpreston.com/assets/portrait-vertical.webp">
+  <meta name="twitter:image" content="https://novemberpreston.com/assets/portrait.jpg">
+  <meta name="twitter:image:alt" content="Portrait of therapist November Preston outdoors">
   <script type="application/ld+json">
     {
       "@context": "https://schema.org",
       "@graph": [
         {
+          "@type": "WebSite",
+          "@id": "https://novemberpreston.com/#website",
+          "url": "https://novemberpreston.com/",
+          "name": "November Preston, LMFT",
+          "inLanguage": "en-US"
+        },
+        {
           "@type": "Person",
-          "@id": "https://www.novemberpreston.com/#person",
+          "@id": "https://novemberpreston.com/#person",
           "name": "November Preston",
           "jobTitle": "Licensed Marriage and Family Therapist",
           "telephone": "+1-510-214-3389",
           "email": "therapy@novemberpreston.com",
-          "url": "https://www.novemberpreston.com/",
-          "image": "https://www.novemberpreston.com/assets/portrait.jpg"
+          "url": "https://novemberpreston.com/",
+          "image": "https://novemberpreston.com/assets/portrait.jpg"
         },
         {
           "@type": "ProfessionalService",
-          "@id": "https://www.novemberpreston.com/#service",
+          "@id": "https://novemberpreston.com/#service",
           "name": "November Preston, LMFT",
-          "url": "https://www.novemberpreston.com/",
+          "url": "https://novemberpreston.com/",
           "description": "Queer-affirming, trauma-informed somatic psychotherapy with telehealth across California and ecotherapy options in the East Bay.",
           "telephone": "+1-510-214-3389",
           "email": "therapy@novemberpreston.com",
-          "areaServed": "California",
+          "areaServed": [
+            {
+              "@type": "State",
+              "name": "California"
+            },
+            {
+              "@type": "Place",
+              "name": "East Bay, San Francisco Bay Area"
+            }
+          ],
           "serviceType": [
             "Somatic psychotherapy",
             "Trauma-informed therapy",
             "Ecotherapy"
           ],
+          "contactPoint": [
+            {
+              "@type": "ContactPoint",
+              "contactType": "Consultation",
+              "telephone": "+1-510-214-3389",
+              "email": "therapy@novemberpreston.com",
+              "areaServed": "US-CA",
+              "availableLanguage": "en"
+            }
+          ],
           "founder": {
-            "@id": "https://www.novemberpreston.com/#person"
+            "@id": "https://novemberpreston.com/#person"
+          }
+        },
+        {
+          "@type": "AboutPage",
+          "@id": "https://novemberpreston.com/about/#webpage",
+          "url": "https://novemberpreston.com/about/",
+          "name": "About November Preston, LMFT",
+          "isPartOf": {
+            "@id": "https://novemberpreston.com/#website"
+          },
+          "about": {
+            "@id": "https://novemberpreston.com/#service"
           }
         }
       ]
@@ -110,7 +150,9 @@
 
         <figure class="media-card">
           <img src="../assets/portrait-vertical.webp" alt="Therapist November Preston outdoors" width="1063" height="1600"
-            loading="eager">
+            srcset="../assets/portrait-vertical-640.webp 640w, ../assets/portrait-vertical-960.webp 960w, ../assets/portrait-vertical-1400.webp 1400w, ../assets/portrait-vertical.webp 1944w"
+            sizes="(max-width: 56rem) 92vw, (max-width: 64rem) 44vw, 26rem"
+            loading="eager" decoding="async" fetchpriority="high">
           <figcaption>Queer-affirming care rooted in curiosity, collaboration, and nervous-system awareness.</figcaption>
         </figure>
       </div>
@@ -178,7 +220,7 @@
         <h2 id="about-next-title">Next step</h2>
         <p>
           If this approach sounds aligned, start with a free 20-minute consultation. You can also check practical details in
-          <a href="../faq/">FAQ</a> before reaching out.
+          <a href="../faq/">therapy rates and insurance FAQ</a> before reaching out.
         </p>
         <div class="button-row">
           <a class="btn btn-primary" href="https://november-preston.clientsecure.me"
@@ -204,7 +246,7 @@
     </div>
   </footer>
 
-  <script src="https://widget-cdn.simplepractice.com/assets/integration-1.0.js"></script>
+  <script src="../simplepractice-loader.js" defer></script>
 </body>
 
 </html>
