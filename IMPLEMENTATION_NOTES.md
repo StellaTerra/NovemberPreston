@@ -2,13 +2,13 @@
 
 ## File structure
 
-- `/Users/stellaclemens/november-preston-demo/index.html` (Home)
-- `/Users/stellaclemens/november-preston-demo/about/index.html`
-- `/Users/stellaclemens/november-preston-demo/ecotherapy/index.html`
-- `/Users/stellaclemens/november-preston-demo/faq/index.html`
-- `/Users/stellaclemens/november-preston-demo/contact/index.html`
-- `/Users/stellaclemens/november-preston-demo/styles.css` (shared styling for all pages)
-- `/Users/stellaclemens/november-preston-demo/assets/*` (existing image assets reused)
+- `index.html` (Home)
+- `about/index.html`
+- `ecotherapy/index.html`
+- `faq/index.html`
+- `contact/index.html`
+- `styles.css` (shared styling for all pages)
+- `assets/*` (existing image assets reused)
 
 ## What changed
 
@@ -46,7 +46,7 @@
 
 ## How to run locally
 
-1. `cd /Users/stellaclemens/november-preston-demo`
+1. `cd <repo-root>`
 2. `python3 -m http.server 4173`
 3. Open:
    - `http://127.0.0.1:4173/`

@@ -1,6 +1,6 @@
-# November Preston Static Site Demo
+# November Preston Practice Site
 
-Multi-page static prototype for November Preston's practice website. No build step required.
+Multi-page static site for November Preston's practice website. No build step required.
 
 ## Scope
 
@@ -25,7 +25,7 @@ The implementation keeps the current lavender-forward design language while impr
 
 ## Run locally
 
-1. `cd /Users/stellaclemens/november-preston-demo`
+1. `cd <repo-root>`
 2. `python3 -m http.server 4173`
 3. Open:
    - `http://127.0.0.1:4173/`
