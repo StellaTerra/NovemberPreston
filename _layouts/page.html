@@ -1,0 +1,18 @@
+<!doctype html>
+<html lang="en">
+{% assign page_data = site.data.pages[page.page_key] %}
+{% include head-meta.html page_data=page_data page_key=page.page_key page_url=page.url asset_prefix=page.asset_prefix %}
+<body>
+  <a class="skip-link" href="#main">Skip to main content</a>
+
+  {% include site-header.html current_nav=page.current_nav root_prefix=page.root_prefix %}
+
+  <main id="main">
+    {% include page-content.html page_data=page_data page_key=page.page_key asset_prefix=page.asset_prefix %}
+  </main>
+
+  {% include site-footer.html root_prefix=page.root_prefix %}
+
+  <script src="{{ page.asset_prefix }}simplepractice-loader.js" defer></script>
+</body>
+</html>

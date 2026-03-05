@@ -1,0 +1,36 @@
+seo:
+  title: "Therapy FAQ: Rates, Insurance, Telehealth in California | November Preston, LMFT"
+  description: Frequently asked questions about rates, insurance, sliding scale, telehealth, and East Bay ecotherapy with November Preston, LMFT.
+  og_description: Answers to common questions about psychotherapy logistics, pricing, insurance, and session format.
+  twitter_description: Read common questions about telehealth, ecotherapy, sliding scale availability, and out-of-network superbills.
+hero:
+  title_id: faq-title
+  eyebrow: Frequently asked questions
+  title: Therapy FAQ for California Clients
+  body: Questions below cover logistics, fees, and session format. If you need anything else, you can [reach out directly](../contact/) before scheduling.
+faq:
+  title_id: faq-list-title
+  title: Common questions and answers
+  items:
+    - question: How can we meet for sessions?
+      answer: Telehealth is available statewide in California by secure video. Ecotherapy sessions in East Bay settings are available after initial sessions, and can be integrated regularly or as needed. Review [East Bay ecotherapy session details](../ecotherapy/) for what to expect.
+    - question: What are your rates?
+      answer: Typical rates are $150 for a 50-minute telehealth session, $170 for a 60-minute ecotherapy session, and $250 for a 90-minute ecotherapy session.
+    - question: Do you offer a sliding scale?
+      answer: Yes. A limited number of sliding-scale openings are reserved based on need and availability, with priority for BIPOC, queer, trans, and low-income clients.
+    - question: Do you take insurance?
+      answer: Insurance is not billed directly. A superbill can be provided for out-of-network reimbursement. Please check your specific mental health benefits with your plan.
+    - question: Where are you located?
+      answer: The practice is based in the East Bay of the San Francisco Bay Area. Telehealth is available statewide in California, and ecotherapy sessions are offered in East Bay locations.
+cta:
+  title_id: faq-next-title
+  title: Still have questions?
+  body: A free 20-minute consult is the best place to discuss fit, goals, and practical details. You can also review the [About page](../about/) for approach and training context.
+  buttons:
+    - class: btn btn-primary
+      label: Request a consult
+      spwidget: true
+    - class: btn btn-secondary
+      label: Read about the practice
+      href: ../about/
+      spwidget: false

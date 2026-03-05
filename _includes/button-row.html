@@ -1,0 +1,9 @@
+<div class="button-row">
+  {% for button in include.buttons %}
+    {% if button.spwidget %}
+      {% include simplepractice-link.html class=button.class label=button.label %}
+    {% else %}
+      <a class="{{ button.class }}" href="{{ button.href }}">{{ button.label }}</a>
+    {% endif %}
+  {% endfor %}
+</div>

@@ -1,0 +1,62 @@
+<section class="section hero" aria-labelledby="{{ include.page_data.hero.title_id }}">
+  <div class="container page-grid">
+    <div class="page-intro">
+      <p class="eyebrow">{{ include.page_data.hero.eyebrow }}</p>
+      <h1 id="{{ include.page_data.hero.title_id }}">{{ include.page_data.hero.title }}</h1>
+      {% for paragraph in include.page_data.hero.paragraphs %}
+      {{ paragraph | markdownify }}
+      {% endfor %}
+      {% include button-row.html buttons=include.page_data.hero.buttons %}
+    </div>
+
+    <figure class="media-card">
+      {% include image.html image=include.page_data.hero.image asset_prefix=include.asset_prefix %}
+      <figcaption>{{ include.page_data.hero.image.caption }}</figcaption>
+    </figure>
+  </div>
+</section>
+
+<section class="section surface" aria-labelledby="{{ include.page_data.concepts.title_id }}">
+  <div class="container">
+    <h2 id="{{ include.page_data.concepts.title_id }}">{{ include.page_data.concepts.title }}</h2>
+    <div class="concept-grid">
+      {% for concept in include.page_data.concepts.cards %}
+      <article class="concept-card">
+        {% include image.html image=concept.image asset_prefix=include.asset_prefix %}
+        <div>
+          <h3>{{ concept.title }}</h3>
+          {{ concept.body | markdownify }}
+        </div>
+      </article>
+      {% endfor %}
+    </div>
+  </div>
+</section>
+
+<section class="section surface" aria-labelledby="{{ include.page_data.how_it_works.title_id }}">
+  <div class="container page-grid">
+    <article class="list-card">
+      <h2 id="{{ include.page_data.how_it_works.title_id }}">{{ include.page_data.how_it_works.title }}</h2>
+      <ul>
+        {% for item in include.page_data.how_it_works.items %}
+        <li>{{ item }}</li>
+        {% endfor %}
+      </ul>
+    </article>
+
+    <article class="callout" aria-labelledby="{{ include.page_data.planning.title_id }}">
+      <h2 id="{{ include.page_data.planning.title_id }}">{{ include.page_data.planning.title }}</h2>
+      {% for paragraph in include.page_data.planning.paragraphs %}
+      {{ paragraph | markdownify }}
+      {% endfor %}
+    </article>
+  </div>
+</section>
+
+<section class="section surface-strong" aria-labelledby="{{ include.page_data.cta.title_id }}">
+  <div class="container cta-panel">
+    <h2 id="{{ include.page_data.cta.title_id }}">{{ include.page_data.cta.title }}</h2>
+    {{ include.page_data.cta.body | markdownify }}
+    {% include button-row.html buttons=include.page_data.cta.buttons %}
+  </div>
+</section>

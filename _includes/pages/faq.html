@@ -1,0 +1,30 @@
+<section class="section hero" aria-labelledby="{{ include.page_data.hero.title_id }}">
+  <div class="container page-intro">
+    <p class="eyebrow">{{ include.page_data.hero.eyebrow }}</p>
+    <h1 id="{{ include.page_data.hero.title_id }}">{{ include.page_data.hero.title }}</h1>
+    {{ include.page_data.hero.body | markdownify }}
+  </div>
+</section>
+
+<section class="section surface" aria-labelledby="{{ include.page_data.faq.title_id }}">
+  <div class="container faq-wrap">
+    <h2 id="{{ include.page_data.faq.title_id }}">{{ include.page_data.faq.title }}</h2>
+
+    {% for item in include.page_data.faq.items %}
+    <details class="faq-item">
+      <summary>{{ item.question }}</summary>
+      <div>
+        {{ item.answer | markdownify }}
+      </div>
+    </details>
+    {% endfor %}
+  </div>
+</section>
+
+<section class="section surface-strong" aria-labelledby="{{ include.page_data.cta.title_id }}">
+  <div class="container cta-panel">
+    <h2 id="{{ include.page_data.cta.title_id }}">{{ include.page_data.cta.title }}</h2>
+    {{ include.page_data.cta.body | markdownify }}
+    {% include button-row.html buttons=include.page_data.cta.buttons %}
+  </div>
+</section>

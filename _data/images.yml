@@ -1,0 +1,117 @@
+home_hero_portrait:
+  src: assets/portrait.jpg
+  width: 1164
+  height: 1200
+  srcset:
+    - src: assets/portrait-640.jpg
+      width: 621
+    - src: assets/portrait-960.jpg
+      width: 931
+    - src: assets/portrait.jpg
+      width: 1164
+  sizes: "(max-width: 52rem) 92vw, (max-width: 64rem) 45vw, 24.5rem"
+  loading: eager
+  decoding: async
+  fetchpriority: high
+home_nature_band:
+  src: assets/trail-panorama.webp
+  width: 2500
+  height: 852
+  srcset:
+    - src: assets/trail-panorama-640.webp
+      width: 640
+    - src: assets/trail-panorama-1200.webp
+      width: 1200
+    - src: assets/trail-panorama-1800.webp
+      width: 1800
+    - src: assets/trail-panorama.webp
+      width: 2500
+  sizes: 100vw
+  loading: lazy
+  decoding: async
+about_hero_portrait_vertical:
+  src: assets/portrait-vertical.webp
+  width: 1063
+  height: 1600
+  srcset:
+    - src: assets/portrait-vertical-640.webp
+      width: 640
+    - src: assets/portrait-vertical-960.webp
+      width: 960
+    - src: assets/portrait-vertical-1400.webp
+      width: 1400
+    - src: assets/portrait-vertical.webp
+      width: 1944
+  sizes: "(max-width: 56rem) 92vw, (max-width: 64rem) 44vw, 26rem"
+  loading: eager
+  decoding: async
+  fetchpriority: high
+ecotherapy_hero_panorama:
+  src: assets/trail-panorama.webp
+  width: 2500
+  height: 852
+  srcset:
+    - src: assets/trail-panorama-640.webp
+      width: 640
+    - src: assets/trail-panorama-1200.webp
+      width: 1200
+    - src: assets/trail-panorama-1800.webp
+      width: 1800
+    - src: assets/trail-panorama.webp
+      width: 2500
+  sizes: "(max-width: 56rem) 92vw, (max-width: 64rem) 44vw, 30rem"
+  loading: eager
+  decoding: async
+  fetchpriority: high
+ecotherapy_concept_forest_tunnel:
+  src: assets/forest-tunnel.webp
+  width: 2500
+  height: 1667
+  srcset:
+    - src: assets/forest-tunnel-480.webp
+      width: 480
+    - src: assets/forest-tunnel-800.webp
+      width: 800
+    - src: assets/forest-tunnel-1200.webp
+      width: 1200
+    - src: assets/forest-tunnel.webp
+      width: 2500
+  sizes: "(max-width: 56rem) 92vw, 31vw"
+  loading: lazy
+  decoding: async
+ecotherapy_concept_oak:
+  src: assets/oak.webp
+  width: 2500
+  height: 1667
+  srcset:
+    - src: assets/oak-480.webp
+      width: 480
+    - src: assets/oak-800.webp
+      width: 800
+    - src: assets/oak-1200.webp
+      width: 1200
+    - src: assets/oak.webp
+      width: 2500
+  sizes: "(max-width: 56rem) 92vw, 31vw"
+  loading: lazy
+  decoding: async
+ecotherapy_concept_mirror_panorama:
+  src: assets/trail-panorama.webp
+  width: 2500
+  height: 852
+  srcset:
+    - src: assets/trail-panorama-640.webp
+      width: 640
+    - src: assets/trail-panorama-1200.webp
+      width: 1200
+    - src: assets/trail-panorama-1800.webp
+      width: 1800
+    - src: assets/trail-panorama.webp
+      width: 2500
+  sizes: "(max-width: 56rem) 92vw, 31vw"
+  loading: lazy
+  decoding: async
+social_portrait:
+  src: assets/portrait.jpg
+social_trail_panorama:
+  src: assets/trail-panorama.jpg

@@ -1,0 +1,14 @@
+{% assign image_ref = include.image %}
+{% assign image_data = site.data.images[image_ref.key] %}
+{% assign asset_prefix = include.asset_prefix | default: '' %}
+{% assign image_alt = image_ref.alt | default: image_data.alt %}
+<img{% if include.class %} class="{{ include.class }}"{% endif %}
+  src="{{ asset_prefix }}{{ image_data.src }}"
+  alt="{{ image_alt }}"
+  width="{{ image_data.width }}"
+  height="{{ image_data.height }}"
+  {% if image_data.srcset %}srcset="{% for source in image_data.srcset %}{{ asset_prefix }}{{ source.src }} {{ source.width }}w{% unless forloop.last %}, {% endunless %}{% endfor %}"{% endif %}
+  {% if image_data.sizes %}sizes="{{ image_data.sizes }}"{% endif %}
+  {% if image_data.loading %}loading="{{ image_data.loading }}"{% endif %}
+  {% if image_data.decoding %}decoding="{{ image_data.decoding }}"{% endif %}
+  {% if image_data.fetchpriority %}fetchpriority="{{ image_data.fetchpriority }}"{% endif %}>

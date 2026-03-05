@@ -1,0 +1,12 @@
+{% case include.page_key %}
+{% when 'home' %}
+  {% include pages/home.html page_data=include.page_data asset_prefix=include.asset_prefix %}
+{% when 'about' %}
+  {% include pages/about.html page_data=include.page_data asset_prefix=include.asset_prefix %}
+{% when 'ecotherapy' %}
+  {% include pages/ecotherapy.html page_data=include.page_data asset_prefix=include.asset_prefix %}
+{% when 'faq' %}
+  {% include pages/faq.html page_data=include.page_data asset_prefix=include.asset_prefix %}
+{% when 'contact' %}
+  {% include pages/contact.html page_data=include.page_data asset_prefix=include.asset_prefix %}
+{% endcase %}

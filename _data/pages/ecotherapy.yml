@@ -1,0 +1,71 @@
+seo:
+  title: Ecotherapy in the East Bay | November Preston, LMFT
+  description: Learn how ecotherapy works with November Preston, LMFT. Outdoor, trauma-informed somatic therapy options in East Bay settings after initial sessions.
+  og_description: Nature-based psychotherapy sessions that can be integrated into ongoing care for California clients.
+  twitter_description: Read how East Bay ecotherapy sessions can support regulation, insight, and healing in ongoing psychotherapy.
+  social_image_key: social_trail_panorama
+  social_image_alt: Open East Bay trail used for nature-based therapy sessions
+hero:
+  title_id: ecotherapy-title
+  eyebrow: East Bay nature-based sessions
+  title: Ecotherapy in the East Bay
+  paragraphs:
+    - Ecotherapy integrates the more-than-human world into psychotherapy. For some clients, outdoor settings can deepen regulation, perspective, and connection while we continue trauma-informed therapeutic work.
+    - Outdoor sessions are available in East Bay locations after initial sessions establish rapport, goals, and a shared sense of safety.
+  buttons:
+    - class: btn btn-primary
+      label: Ask about ecotherapy
+      spwidget: true
+    - class: btn btn-secondary
+      label: Read logistics in FAQ
+      href: ../faq/
+      spwidget: false
+  image:
+    key: ecotherapy_hero_panorama
+    alt: East Bay ridgeline trail with open sky
+    caption: Outdoor sessions are collaborative and tailored to your access needs.
+concepts:
+  title_id: nature-roles-title
+  title: Three ways nature can support therapy
+  cards:
+    - title: Nature as healer
+      body: Mindful immersion in natural settings can support mental and physical regulation.
+      image:
+        key: ecotherapy_concept_forest_tunnel
+        alt: Shaded forest path in the East Bay
+    - title: Nature as teacher
+      body: Slowing down and observing ecosystems can reveal lessons about pace, adaptation, and belonging.
+      image:
+        key: ecotherapy_concept_oak
+        alt: Oak tree branches with moss
+    - title: Nature as mirror
+      body: The more-than-human world can reflect patterns we are living inside. Through guided attention to place, rhythm, and relationship, we can notice what is being repeated, what is being protected, and what is ready to change.
+      image:
+        key: ecotherapy_concept_mirror_panorama
+        alt: Trail through East Bay grassland and trees
+how_it_works:
+  title_id: how-it-works-title
+  title: How ecotherapy sessions work
+  items:
+    - Ecotherapy is integrated into ongoing psychotherapy, not offered as a standalone one-off service.
+    - After initial sessions, we can meet outdoors regularly or as needed.
+    - Sessions might be walk-and-talk, seated therapy outdoors, or intentional place-based exercises.
+    - Scheduling and location planning are done collaboratively based on your goals and access needs.
+planning:
+  title_id: safety-title
+  title: Accessibility and practical planning
+  paragraphs:
+    - We discuss terrain, sensory factors, privacy, transportation, and physical comfort before scheduling. If outdoor care is not a fit on a given week, we can shift to telehealth.
+    - For broader treatment details, visit the [somatic therapy approach and training overview](../about/).
+cta:
+  title_id: eco-next-title
+  title: Interested in including ecotherapy?
+  body: Bring it up during your consult. We can talk through questions, concerns, and how to incorporate nature-based sessions in a way that supports your therapeutic goals.
+  buttons:
+    - class: btn btn-primary
+      label: Request a consult
+      spwidget: true
+    - class: btn btn-secondary
+      label: Review rates and logistics FAQ
+      href: ../faq/
+      spwidget: false

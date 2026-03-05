@@ -1,0 +1,72 @@
+<section class="section hero" aria-labelledby="{{ include.page_data.hero.title_id }}">
+  <div class="container hero-grid">
+    <div class="hero-copy">
+      <p class="eyebrow">{{ include.page_data.hero.eyebrow }}</p>
+      <h1 id="{{ include.page_data.hero.title_id }}">{{ include.page_data.hero.title }}</h1>
+      <p class="hero-subhead">{{ include.page_data.hero.subhead }}</p>
+      {% include button-row.html buttons=include.page_data.hero.buttons %}
+    </div>
+
+    <figure class="hero-portrait">
+      {% include image.html image=include.page_data.hero.image asset_prefix=include.asset_prefix %}
+      <figcaption>{{ include.page_data.hero.image.caption }}</figcaption>
+    </figure>
+  </div>
+</section>
+
+<section class="section surface" aria-labelledby="{{ include.page_data.services.title_id }}">
+  <div class="container">
+    <h2 id="{{ include.page_data.services.title_id }}">{{ include.page_data.services.title }}</h2>
+    <ul class="pill-list" aria-label="{{ include.page_data.services.pills_label }}">
+      {% for item in include.page_data.services.pills %}
+      <li>{{ item }}</li>
+      {% endfor %}
+    </ul>
+
+    {% include card-grid.html cards=include.page_data.services.cards %}
+  </div>
+</section>
+
+<section class="nature-band" aria-labelledby="{{ include.page_data.nature_band.title_id }}">
+  {% include image.html class="nature-band-image" image=include.page_data.nature_band.image asset_prefix=include.asset_prefix %}
+  <div class="container nature-band-content">
+    <h2 id="{{ include.page_data.nature_band.title_id }}">{{ include.page_data.nature_band.title }}</h2>
+    {{ include.page_data.nature_band.body | markdownify }}
+  </div>
+</section>
+
+<section class="section surface" aria-labelledby="{{ include.page_data.fit.title_id }}">
+  <div class="container fit-grid">
+    <article class="fit-box">
+      <h2 id="{{ include.page_data.fit.title_id }}">{{ include.page_data.fit.good.title }}</h2>
+      <ul>
+        {% for item in include.page_data.fit.good.items %}
+        <li>{{ item }}</li>
+        {% endfor %}
+      </ul>
+    </article>
+    <article class="fit-box">
+      <h2>{{ include.page_data.fit.maybe_not.title }}</h2>
+      <ul>
+        {% for item in include.page_data.fit.maybe_not.items %}
+        <li>{{ item }}</li>
+        {% endfor %}
+      </ul>
+    </article>
+  </div>
+</section>
+
+<section class="section surface" aria-labelledby="{{ include.page_data.faq_preview.title_id }}">
+  <div class="container">
+    <h2 id="{{ include.page_data.faq_preview.title_id }}">{{ include.page_data.faq_preview.title }}</h2>
+    {% include card-grid.html cards=include.page_data.faq_preview.cards %}
+  </div>
+</section>
+
+<section class="section surface-strong" aria-labelledby="{{ include.page_data.cta.title_id }}">
+  <div class="container cta-panel">
+    <h2 id="{{ include.page_data.cta.title_id }}">{{ include.page_data.cta.title }}</h2>
+    {{ include.page_data.cta.body | markdownify }}
+    {% include button-row.html buttons=include.page_data.cta.buttons %}
+  </div>
+</section>

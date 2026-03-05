@@ -1,0 +1,71 @@
+seo:
+  title: About November Preston, LMFT | Queer Somatic Therapist
+  description: "Learn about November Preston, LMFT: queer-affirming, trauma-informed somatic therapist offering California telehealth and East Bay ecotherapy options."
+  og_description: "Background, clinical approach, and trainings for November Preston's queer and trans affirming somatic psychotherapy practice."
+  twitter_description: "Read about November Preston's approach, values, and training in trauma-informed somatic therapy and ecotherapy."
+  social_image_alt: Portrait of therapist November Preston outdoors
+hero:
+  title_id: about-title
+  eyebrow: About the practice
+  title: About November Preston
+  paragraphs:
+    - I am a Licensed Marriage and Family Therapist (#119501) supporting queer and trans adults in California. My practice is trauma-informed, relational, and somatic, with care paced to your capacity and goals.
+    - Therapy with me is collaborative and consent-based. We track patterns in mind, body, and relationship, then build practical tools for regulation while making space for deeper healing.
+    - "While I work one-on-one with individuals, I also hold the wider systems shaping each person's life: support, exclusion, and oppression all affect how pain is carried and how healing becomes possible."
+    - My approach is queer-affirming, relational, and anti-oppressive. I do not treat you as broken; we work together to understand adaptive patterns, reduce suffering, and build capacity for choice, connection, and self-trust.
+  buttons:
+    - class: btn btn-primary
+      label: Schedule a consult
+      spwidget: true
+    - class: btn btn-secondary
+      label: Explore ecotherapy
+      href: ../ecotherapy/
+      spwidget: false
+  image:
+    key: about_hero_portrait_vertical
+    alt: Therapist November Preston outdoors
+    caption: Queer-affirming care rooted in curiosity, collaboration, and nervous-system awareness.
+approach:
+  title_id: approach-title
+  title: Approach at a glance
+  items:
+    - Queer and trans centered psychotherapy
+    - Somatic and trauma-informed methods
+    - Relational, anti-oppressive, and strengths-based lens
+    - Telehealth statewide in California with optional East Bay ecotherapy
+values:
+  title_id: fit-values-title
+  title: Values in session
+  paragraphs:
+    - You can expect explicit consent practices, transparent communication, and room for complexity. We move at a pace that supports safety without losing momentum.
+    - "**Systemic context:** Your distress is not only personal; it is also shaped by social conditions, identity-based stress, and relational environments."
+training:
+  title_id: training-title
+  title: Selected certifications and trainings
+  cards:
+    - title: Ecotherapy training
+      lines:
+        - Professional Ecotherapy Certification (Assistant), Wilderness Reflections, 2019.
+        - Certified Ecotherapist, Wilderness Reflections, 2019.
+        - Introduction to Ecotherapy, Wilderness Reflections, 2018.
+    - title: Hakomi and somatic study
+      lines:
+        - Hakomi Professional Training, Hakomi Institute of California, 2014.
+        - Hakomi Comprehensive Trainings I and II (Assistant), Hakomi Institute of California, 2018-2019.
+    - title: Queer-focused development
+      lines:
+        - Queer Consciousness Emphasis, John F. Kennedy University, 2013.
+        - Gender Spectrum Conference, 2018.
+        - Ongoing learning grounded in affirming, anti-oppressive clinical practice.
+cta:
+  title_id: about-next-title
+  title: Next step
+  body: If this approach sounds aligned, start with a free 20-minute consultation. You can also check practical details in [therapy rates and insurance FAQ](../faq/) before reaching out.
+  buttons:
+    - class: btn btn-primary
+      label: Request a consult
+      spwidget: true
+    - class: btn btn-secondary
+      label: Read FAQ
+      href: ../faq/
+      spwidget: false

@@ -1,0 +1,83 @@
+brand: November Preston, LMFT
+footer_text: "November Preston, LMFT #119501 • Telehealth statewide California • East Bay based"
+navigation:
+  - key: home
+    label: Home
+    path: ""
+  - key: about
+    label: About
+    path: "about/"
+  - key: ecotherapy
+    label: Ecotherapy
+    path: "ecotherapy/"
+  - key: faq
+    label: FAQ
+    path: "faq/"
+  - key: contact
+    label: Contact
+    path: "contact/"
+simplepractice:
+  href: "https://november-preston.clientsecure.me"
+  scope_id: "4b0398aa-4d73-4ee6-b781-78bc121cd6b8"
+  scope_uri: "november-preston"
+  application_id: "7c72cb9f9a9b913654bb89d6c7b4e71a77911b30192051da35384b4d0c6d505b"
+  type: OAR
+seo:
+  base_url: https://novemberpreston.com
+  og_type: website
+  twitter_card: summary_large_image
+  default_social_image_key: social_portrait
+  default_social_image_alt: Portrait of therapist November Preston
+schema:
+  website_id: https://novemberpreston.com/#website
+  service_id: https://novemberpreston.com/#service
+  shared_graph:
+    - "@type": WebSite
+      "@id": https://novemberpreston.com/#website
+      url: https://novemberpreston.com/
+      name: November Preston, LMFT
+      inLanguage: en-US
+    - "@type": Person
+      "@id": https://novemberpreston.com/#person
+      name: November Preston
+      jobTitle: Licensed Marriage and Family Therapist
+      telephone: "+1-510-214-3389"
+      email: therapy@novemberpreston.com
+      url: https://novemberpreston.com/
+      image: https://novemberpreston.com/assets/portrait.jpg
+    - "@type": ProfessionalService
+      "@id": https://novemberpreston.com/#service
+      name: November Preston, LMFT
+      url: https://novemberpreston.com/
+      description: Queer-affirming, trauma-informed somatic psychotherapy with telehealth across California and ecotherapy options in the East Bay.
+      telephone: "+1-510-214-3389"
+      email: therapy@novemberpreston.com
+      areaServed:
+        - "@type": State
+          name: California
+        - "@type": Place
+          name: East Bay, San Francisco Bay Area
+      serviceType:
+        - Somatic psychotherapy
+        - Trauma-informed therapy
+        - Ecotherapy
+      contactPoint:
+        - "@type": ContactPoint
+          contactType: Consultation
+          telephone: "+1-510-214-3389"
+          email: therapy@novemberpreston.com
+          areaServed: US-CA
+          availableLanguage: en
+      founder:
+        "@id": https://novemberpreston.com/#person
+  page:
+    default_type: WebPage
+    types:
+      about: AboutPage
+      contact: ContactPage
+    names:
+      home: Queer Somatic Therapy in California
+      about: About November Preston, LMFT
+      ecotherapy: Ecotherapy in the East Bay
+      faq: Therapy FAQ for California Clients
+      contact: Contact and Consultation Scheduling

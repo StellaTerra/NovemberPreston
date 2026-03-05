@@ -1,0 +1,36 @@
+<section class="section hero" aria-labelledby="{{ include.page_data.hero.title_id }}">
+  <div class="container page-intro">
+    <p class="eyebrow">{{ include.page_data.hero.eyebrow }}</p>
+    <h1 id="{{ include.page_data.hero.title_id }}">{{ include.page_data.hero.title }}</h1>
+    {{ include.page_data.hero.body | markdownify }}
+  </div>
+</section>
+
+<section class="section surface-strong" aria-labelledby="{{ include.page_data.direct.title_id }}">
+  <div class="container contact-grid">
+    <div class="list-card">
+      <h2 id="{{ include.page_data.direct.title_id }}">{{ include.page_data.direct.title }}</h2>
+      {% for row in include.page_data.direct.rows %}
+      <p><strong>{{ row.label }}:</strong>{% if row.href %} <a href="{{ row.href }}">{{ row.value }}</a>{% else %} {{ row.value }}{% endif %}</p>
+      {% endfor %}
+      {% for note in include.page_data.direct.notes %}
+      <p class="note">{{ note }}</p>
+      {% endfor %}
+    </div>
+
+    <div class="scheduler-cta" aria-label="SimplePractice scheduling">
+      <h2 class="sr-only">Schedule with SimplePractice</h2>
+      <!-- SIMPLEPRACTICE_WIDGET_INSERTION_POINT: Replace data-spwidget-* values with your account-specific values if this project is copied to another practice account. -->
+      {% include simplepractice-link.html class='btn btn-primary' label=include.page_data.scheduler.button_label %}
+      <p class="integration-note">{{ include.page_data.scheduler.note }}</p>
+    </div>
+  </div>
+</section>
+
+<section class="section surface" aria-labelledby="{{ include.page_data.cta.title_id }}">
+  <div class="container cta-panel">
+    <h2 id="{{ include.page_data.cta.title_id }}">{{ include.page_data.cta.title }}</h2>
+    {{ include.page_data.cta.body | markdownify }}
+    {% include button-row.html buttons=include.page_data.cta.buttons %}
+  </div>
+</section>

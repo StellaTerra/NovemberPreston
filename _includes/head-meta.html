@@ -1,0 +1,88 @@
+{% assign site_data = site.data.site %}
+{% assign page_seo = include.page_data.seo %}
+{% assign site_seo = site_data.seo %}
+{% assign schema_data = site_data.schema %}
+{% assign canonical = page_seo.canonical %}
+{% if canonical == nil or canonical == '' %}
+  {% assign canonical = site_seo.base_url | append: include.page_url %}
+{% elsif canonical contains '://' %}
+{% else %}
+  {% assign canonical_path = canonical | remove_first: '/' %}
+  {% assign canonical = site_seo.base_url | append: '/' | append: canonical_path %}
+{% endif %}
+{% assign social_key = page_seo.social_image_key | default: site_seo.default_social_image_key %}
+{% assign social_image = site.data.images[social_key] %}
+{% assign social_image_path = social_image.src %}
+{% assign social_image_path_first = social_image_path | slice: 0, 1 %}
+{% if social_image_path_first == '/' %}
+  {% assign social_image_path = social_image_path | remove_first: '/' %}
+{% endif %}
+{% assign social_image_url = site_seo.base_url | append: '/' | append: social_image_path %}
+{% assign social_image_alt = page_seo.social_image_alt | default: site_seo.default_social_image_alt %}
+{% assign og_description = page_seo.og_description | default: page_seo.description %}
+{% assign twitter_description = page_seo.twitter_description | default: page_seo.description %}
+{% assign page_schema_type = schema_data.page.types[include.page_key] | default: schema_data.page.default_type %}
+{% assign page_schema_name = schema_data.page.names[include.page_key] | default: include.page_data.hero.title | default: page_seo.title %}
+{% assign page_schema_id = canonical | append: '#webpage' %}
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>{{ page_seo.title }}</title>
+  <meta name="description" content="{{ page_seo.description }}">
+  <link rel="canonical" href="{{ canonical }}">
+  <meta property="og:type" content="{{ site_seo.og_type }}">
+  <meta property="og:site_name" content="{{ site_data.brand }}">
+  <meta property="og:title" content="{{ page_seo.title }}">
+  <meta property="og:description" content="{{ og_description }}">
+  <meta property="og:url" content="{{ canonical }}">
+  <meta property="og:image" content="{{ social_image_url }}">
+  <meta property="og:image:alt" content="{{ social_image_alt }}">
+  <meta name="twitter:card" content="{{ site_seo.twitter_card }}">
+  <meta name="twitter:title" content="{{ page_seo.title }}">
+  <meta name="twitter:description" content="{{ twitter_description }}">
+  <meta name="twitter:image" content="{{ social_image_url }}">
+  <meta name="twitter:image:alt" content="{{ social_image_alt }}">
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {% for node in schema_data.shared_graph %}
+    {{ node | jsonify }},
+    {% endfor %}
+    {
+      "@type": {{ page_schema_type | jsonify }},
+      "@id": {{ page_schema_id | jsonify }},
+      "url": {{ canonical | jsonify }},
+      "name": {{ page_schema_name | jsonify }},
+      "isPartOf": { "@id": {{ schema_data.website_id | jsonify }} },
+      "about": { "@id": {{ schema_data.service_id | jsonify }} }
+    }
+  ]
+}
+  </script>
+  {% if include.page_key == 'faq' and include.page_data.faq and include.page_data.faq.items %}
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "@id": {{ canonical | append: '#faqpage' | jsonify }},
+  "url": {{ canonical | jsonify }},
+  "isPartOf": { "@id": {{ schema_data.website_id | jsonify }} },
+  "mainEntity": [
+    {% for item in include.page_data.faq.items %}
+    {% assign answer_text = item.answer | markdownify | strip_html | strip_newlines | replace: '  ', ' ' | strip %}
+    {
+      "@type": "Question",
+      "name": {{ item.question | strip | jsonify }},
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": {{ answer_text | jsonify }}
+      }
+    }{% unless forloop.last %},{% endunless %}
+    {% endfor %}
+  ]
+}
+  </script>
+  {% endif %}
+  <link rel="stylesheet" href="{{ include.asset_prefix }}styles.css">
+</head>

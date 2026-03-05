@@ -1,0 +1,14 @@
+<header class="site-header">
+  <div class="container header-inner">
+    <a class="brand" href="{{ include.root_prefix }}">{{ site.data.site.brand }}</a>
+    <nav aria-label="Primary navigation">
+      <ul class="nav-list">
+        {% for item in site.data.site.navigation %}
+        <li>
+          <a href="{{ include.root_prefix }}{{ item.path }}"{% if item.key == include.current_nav %} aria-current="page"{% endif %}>{{ item.label }}</a>
+        </li>
+        {% endfor %}
+      </ul>
+    </nav>
+  </div>
+</header>

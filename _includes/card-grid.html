@@ -1,0 +1,8 @@
+<div class="{{ include.wrapper_class | default: 'card-grid' }}">
+  {% for card in include.cards %}
+  <article class="{{ include.article_class | default: 'card' }}">
+    <h3>{{ card.title }}</h3>
+    {{ card.body | markdownify }}
+  </article>
+  {% endfor %}
+</div>
