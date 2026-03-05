@@ -1,10 +1,12 @@
 # November Preston Practice Site
 
-Multi-page static site for November Preston's practice website. No build step required.
+Multi-page static site for [NovemberPreston.com](https://novemberpreston.com), deployed with GitHub Pages.
+
+This repo is moving to a Jekyll-driven content workflow so that non-technical edits (copy, trainings, FAQ entries, photos) can be made without rewriting page HTML.
 
 ## Scope
 
-This repo now includes a complete 5-page site covering the core live-site territory:
+The site covers five core routes:
 
 - `/` (Home)
 - `/about/`
@@ -12,85 +14,113 @@ This repo now includes a complete 5-page site covering the core live-site territ
 - `/faq/`
 - `/contact/`
 
-The implementation keeps the current lavender-forward design language while improving semantic structure, accessibility behavior, and technical SEO.
+## Why Jekyll Here
 
-## Primary goals
+We want:
 
-- Keep queer-first, trauma-informed messaging with clear hierarchy.
-- Preserve therapist portrait trust cues and minimal visual clutter.
-- Use route-based global navigation (no primary section-anchor nav).
-- Keep SimplePractice scheduling as the primary consultation flow.
-- Improve WCAG support and mobile/tablet/desktop responsiveness.
-- Ensure static-host friendliness with clean relative paths.
+- Static output (fast, SEO-friendly, no runtime waterfall)
+- Reusable templates for shared layout/nav/footer
+- Content managed in simple files (YAML + Markdown)
+- Push-to-deploy on GitHub Pages
 
-## Run locally
+Jekyll renders everything at build time. The browser receives fully rendered HTML on first request.
 
-1. `cd <repo-root>`
-2. `python3 -m http.server 4173`
+## Planned Content Model
+
+The intended structure is:
+
+- `_layouts/` shared page shells (default layout, metadata scaffolding)
+- `_includes/` shared partials (nav, footer, reusable sections)
+- `_data/` per-page YAML content sources (for example `faq.yml`, `about.yml`)
+- Route templates (`index.html`, `about/index.html`, etc.) with Liquid loops/variables
+- `assets/` images and static media
+
+### Markdown Inside YAML
+
+For rich text fields inside YAML (lists, bold, links), store Markdown in a multiline field and render with `markdownify` in templates.
+
+Example `_data/faq.yml`:
+
+```yml
+- q: Do you offer virtual sessions?
+  a_md: |-
+    Yes. I offer virtual sessions across California.
+
+    This includes:
+    - Video sessions
+    - Flexible scheduling
+    - **Secure** platform use
+```
+
+Template usage:
+
+```html
+{% for item in site.data.faq %}
+  <details>
+    <summary>{{ item.q }}</summary>
+    <div>{{ item.a_md | markdownify }}</div>
+  </details>
+{% endfor %}
+```
+
+## Local Development
+
+### Prerequisites (macOS)
+
+1. Install modern Ruby:
+   - `brew install ruby`
+2. Add Ruby + user gem bin to your shell PATH (zsh):
+   - `echo 'export PATH="/opt/homebrew/opt/ruby/bin:$HOME/.gem/ruby/4.0.0/bin:$PATH"' >> ~/.zshrc`
+   - `source ~/.zshrc`
+3. Install Jekyll tooling:
+   - `gem install --user-install jekyll webrick --no-document`
+
+### Run Dev Server
+
+1. `cd /Users/stellaclemens/november-preston-demo`
+2. `jekyll serve --host 127.0.0.1 --port 4000 --livereload`
 3. Open:
-   - `http://127.0.0.1:4173/`
-   - `http://127.0.0.1:4173/about/`
-   - `http://127.0.0.1:4173/ecotherapy/`
-   - `http://127.0.0.1:4173/faq/`
-   - `http://127.0.0.1:4173/contact/`
+   - `http://127.0.0.1:4000/`
+   - `http://127.0.0.1:4000/about/`
+   - `http://127.0.0.1:4000/ecotherapy/`
+   - `http://127.0.0.1:4000/faq/`
+   - `http://127.0.0.1:4000/contact/`
 
-## Key files
+Generated artifacts are gitignored (`_site/`, `.jekyll-cache/`, `.jekyll-metadata`, `.sass-cache/`).
 
-- `index.html` (Home)
-- `about/index.html`
-- `ecotherapy/index.html`
-- `faq/index.html`
-- `contact/index.html`
-- `styles.css` (shared design system + responsive behavior)
-- `assets/` (local images)
-- `IMPLEMENTATION_NOTES.md` (change log and QA summary)
+## Editing Workflow (Non-Technical)
 
-## SEO and structured data
+Target workflow for November:
 
-Implemented per page:
+1. Edit content in `_data/*.yml` (or page Markdown files where applicable).
+2. Add/replace images in `assets/`.
+3. Commit changes in GitHub web UI.
+4. GitHub Pages rebuilds and deploys automatically.
 
-- Unique `<title>`
-- Unique meta description
-- Canonical URL
-- Open Graph basics
-- Twitter card basics
-- Internal links across relevant pages
+No direct HTML editing required for routine copy updates once templates/data are fully wired.
 
-Structured data:
+## SEO and Accessibility Goals
 
-- `Person` + `ProfessionalService` JSON-LD on all pages
-- `FAQPage` JSON-LD on `/faq/`
+Maintain existing standards during migration:
 
-## Accessibility notes
+- Unique `<title>` and meta description per route
+- Canonical URLs and basic social metadata
+- Structured data (`Person`, `ProfessionalService`, and `FAQPage` where relevant)
+- One `h1` per page, valid heading order, keyboard accessibility, visible focus states
 
-Implemented:
+## SimplePractice Integration
 
-- One `h1` per page with valid heading order
-- Skip link (`Skip to main content`)
-- Keyboard-reachable nav/controls
-- Visible focus styles
-- Native `details/summary` FAQ interaction
-- Reduced-motion handling
+SimplePractice modal scheduling is wired via `data-spwidget-*` attributes and:
 
-Automated checks:
+- `https://widget-cdn.simplepractice.com/assets/integration-1.0.js`
 
-- axe (`wcag2a`, `wcag2aa`, `wcag22aa`) run on all five pages with zero automatic violations.
-
-Manual checks still recommended for:
-
-- Keyboard flow comfort/cognitive load
-- Cross-browser behavior of third-party SimplePractice modal
-
-## SimplePractice integration
-
-SimplePractice modal scheduling is wired via account-specific autobind attributes (`data-spwidget-*`).
-
-- Primary consult CTAs on Home/About/Ecotherapy/FAQ/Contact are modal-trigger enabled.
-- Script source:
-  - `https://widget-cdn.simplepractice.com/assets/integration-1.0.js`
-
-If account values change, update the `data-spwidget-scope-id`, `data-spwidget-scope-uri`, and `data-spwidget-application-id` attributes where used.
+If account values change, update widget data attributes where used.
 
 ## Deployment
 
-This project is plain static HTML/CSS and can be deployed as-is to Netlify, Cloudflare Pages, GitHub Pages, or similar static hosting.
+The deployed site remains static content on GitHub Pages.
+
+- Source control: GitHub
+- Build: Jekyll on GitHub Pages
+- Publish trigger: push to default branch (`main`)
+- Domain: `novemberpreston.com`
