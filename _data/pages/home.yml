@@ -2,7 +2,7 @@ seo:
   title: Queer Somatic Therapy in California | November Preston, LMFT
   description: Queer-affirming, trauma-informed somatic therapy for California adults. Telehealth statewide, with East Bay ecotherapy options and free 20-minute consultations.
   og_description: Queer and trans affirming somatic psychotherapy with telehealth statewide in California and optional East Bay ecotherapy sessions.
-  twitter_description: Somatic psychotherapy for queer and trans adults across California, with East Bay nature-based session options.
+  twitter_description: Somatic psychotherapy for queer and trans youth and adults across California, with East Bay nature-based session options.
   social_image_alt: Portrait of therapist November Preston smiling
 hero:
   title_id: home-title
@@ -22,8 +22,8 @@ services:
   title: Who this care is for
   pills_label: Client focus areas
   pills:
-    - Queer and trans adults
-    - Complex and developmental trauma
+    - Queer and trans youth and adults
+    - Autists, ADHDers, Neuroqueers
     - Anxiety, depression, and grief
     - Attachment and relational healing
   cards:
@@ -47,13 +47,13 @@ fit:
     items:
       - Adults in California seeking queer-affirming trauma therapy
       - Interest in body-based, relational, or nature-based work
-      - Looking for weekly or biweekly ongoing care
+      - Looking for weekly ongoing care
   maybe_not:
     title: May not be the best fit
     items:
       - Need immediate crisis stabilization
       - Need insurance-only billing
-      - Need care outside California for telehealth
+      - Looking for in-person, in-office sessions
 faq_preview:
   title_id: faq-preview-title
   title: Common questions
