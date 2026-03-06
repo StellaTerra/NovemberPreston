@@ -9,9 +9,9 @@ hero:
   eyebrow: About the practice
   title: About November Preston
   paragraphs:
-    - I am a Licensed Marriage and Family Therapist (#119501) supporting queer and trans adults in California. My practice is trauma-informed, relational, and somatic, with care paced to your capacity and goals.
+    - I am a Licensed Marriage and Family Therapist (#119501) supporting queer and trans youth and adults in California. My practice is trauma-informed, relational, and somatic, with care paced to your capacity and goals.
     - Therapy with me is collaborative and consent-based. We track patterns in mind, body, and relationship, then build practical tools for regulation while making space for deeper healing.
-    - "While I work one-on-one with individuals, I also hold the wider systems shaping each person's life: support, exclusion, and oppression all affect how pain is carried and how healing becomes possible."
+    - "While I work one-on-one with individuals, I also hold the wider systems shaping each person's life: oppression, exclusion, and support all affect how pain is carried and how healing becomes possible."
     - My approach is queer-affirming, relational, and anti-oppressive. I do not treat you as broken; we work together to understand adaptive patterns, reduce suffering, and build capacity for choice, connection, and self-trust.
   buttons:
     - class: btn btn-primary
@@ -52,6 +52,7 @@ training:
       lines:
         - Hakomi Professional Training, Hakomi Institute of California, 2014.
         - Hakomi Comprehensive Trainings I and II (Assistant), Hakomi Institute of California, 2018-2019.
+        - Acceptance and Commitment Immersion Training, 2024
     - title: Queer-focused development
       lines:
         - Queer Consciousness Emphasis, John F. Kennedy University, 2013.
