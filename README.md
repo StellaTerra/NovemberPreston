@@ -74,12 +74,24 @@ Template usage:
    - `source ~/.zshrc`
 3. Install Jekyll tooling:
    - `gem install --user-install jekyll webrick --no-document`
+4. Verify the shell is using the Homebrew Ruby toolchain instead of macOS system Ruby:
+   - `ruby --version`
+   - `which jekyll`
+
+If `jekyll` is still "not found", your current shell probably has not picked up the PATH change yet. Run:
+
+```sh
+export PATH="/opt/homebrew/opt/ruby/bin:$HOME/.gem/ruby/4.0.0/bin:$PATH"
+```
+
+Then re-run `ruby --version` and `jekyll --version`.
 
 ### Run Dev Server
 
 1. `cd /Users/stellaclemens/november-preston-demo`
-2. `jekyll serve --host 127.0.0.1 --port 4000 --livereload`
-3. Open:
+2. `export PATH="/opt/homebrew/opt/ruby/bin:$HOME/.gem/ruby/4.0.0/bin:$PATH"`
+3. `jekyll serve --host 127.0.0.1 --port 4000 --livereload`
+4. Open:
    - `http://127.0.0.1:4000/`
    - `http://127.0.0.1:4000/about/`
    - `http://127.0.0.1:4000/ecotherapy/`
