@@ -1,8 +1,16 @@
-<section class="section hero" aria-labelledby="{{ include.page_data.hero.title_id }}">
+<section class="section home-intro" aria-labelledby="{{ include.page_data.hero.title_id }}">
   <div class="container hero-grid">
     <div class="hero-copy">
-      <p class="eyebrow">{{ include.page_data.hero.eyebrow }}</p>
-      <h1 id="{{ include.page_data.hero.title_id }}">{{ include.page_data.hero.title }}</h1>
+      {% if include.page_data.hero.eyebrow %}
+      <p class="meta-line">{{ include.page_data.hero.eyebrow }}</p>
+      {% endif %}
+      <h1 id="{{ include.page_data.hero.title_id }}">
+        {% if include.page_data.hero.title_lines %}
+          {% for line in include.page_data.hero.title_lines %}{{ line }}{% unless forloop.last %}<br>{% endunless %}{% endfor %}
+        {% else %}
+          {{ include.page_data.hero.title }}
+        {% endif %}
+      </h1>
       <p class="hero-subhead">{{ include.page_data.hero.subhead }}</p>
       {% include button-row.html buttons=include.page_data.hero.buttons %}
     </div>
@@ -15,29 +23,35 @@
 </section>
 
 <section class="section surface" aria-labelledby="{{ include.page_data.services.title_id }}">
-  <div class="container">
-    <h2 id="{{ include.page_data.services.title_id }}">{{ include.page_data.services.title }}</h2>
-    <ul class="pill-list" aria-label="{{ include.page_data.services.pills_label }}">
-      {% for item in include.page_data.services.pills %}
-      <li>{{ item }}</li>
-      {% endfor %}
-    </ul>
+  <div class="container split-overview">
+    <div class="section-copy">
+      <h2 id="{{ include.page_data.services.title_id }}">{{ include.page_data.services.title }}</h2>
+      <ul class="service-list" aria-label="{{ include.page_data.services.pills_label }}">
+        {% for item in include.page_data.services.pills %}
+        <li>{{ item }}</li>
+        {% endfor %}
+      </ul>
+    </div>
 
     {% include card-grid.html cards=include.page_data.services.cards %}
   </div>
 </section>
 
-<section class="nature-band" aria-labelledby="{{ include.page_data.nature_band.title_id }}">
-  {% include image.html class="nature-band-image" image=include.page_data.nature_band.image asset_prefix=include.asset_prefix %}
-  <div class="container nature-band-content">
-    <h2 id="{{ include.page_data.nature_band.title_id }}">{{ include.page_data.nature_band.title }}</h2>
-    {{ include.page_data.nature_band.body | markdownify }}
+<section class="section surface nature-section" aria-labelledby="{{ include.page_data.nature_band.title_id }}">
+  <div class="container page-grid page-grid--nature">
+    <figure class="media-card media-card--quiet">
+      {% include image.html image=include.page_data.nature_band.image asset_prefix=include.asset_prefix %}
+    </figure>
+    <div class="page-intro">
+      <h2 id="{{ include.page_data.nature_band.title_id }}">{{ include.page_data.nature_band.title }}</h2>
+      {{ include.page_data.nature_band.body | markdownify }}
+    </div>
   </div>
 </section>
 
 <section class="section surface" aria-labelledby="{{ include.page_data.fit.title_id }}">
-  <div class="container fit-grid">
-    <article class="fit-box">
+  <div class="container list-pair">
+    <article class="list-card">
       <h2 id="{{ include.page_data.fit.title_id }}">{{ include.page_data.fit.good.title }}</h2>
       <ul>
         {% for item in include.page_data.fit.good.items %}
@@ -45,7 +59,7 @@
         {% endfor %}
       </ul>
     </article>
-    <article class="fit-box">
+    <article class="list-card">
       <h2>{{ include.page_data.fit.maybe_not.title }}</h2>
       <ul>
         {% for item in include.page_data.fit.maybe_not.items %}

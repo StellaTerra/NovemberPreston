@@ -16,10 +16,6 @@ hero:
     - class: btn btn-primary
       label: Ask about ecotherapy
       spwidget: true
-    - class: btn btn-secondary
-      label: Read logistics in FAQ
-      href: ../faq/
-      spwidget: false
   image:
     key: ecotherapy_hero_panorama
     alt: East Bay ridgeline trail with open sky
@@ -60,12 +56,8 @@ planning:
 cta:
   title_id: eco-next-title
   title: Interested in including ecotherapy?
-  body: Bring it up during your consult. We can talk through questions, concerns, and how to incorporate nature-based sessions in a way that supports your therapeutic goals.
+  body: Bring it up during your consult. We can talk through questions, concerns, and how to incorporate nature-based sessions in a way that supports your therapeutic goals. You can also review [rates and logistics in the FAQ](../faq/).
   buttons:
     - class: btn btn-primary
       label: Request a consult
       spwidget: true
-    - class: btn btn-secondary
-      label: Review rates and logistics FAQ
-      href: ../faq/
-      spwidget: false

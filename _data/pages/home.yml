@@ -8,6 +8,9 @@ hero:
   title_id: home-title
   eyebrow: Telehealth statewide California • East Bay ecotherapy option
   title: Queer Somatic Therapy in California
+  title_lines:
+    - Queer Somatic
+    - Therapy in California
   subhead: Collaborative psychotherapy for queer and trans adults healing trauma, anxiety, grief, and attachment wounds. Sessions are grounded in consent, body awareness, and practical nervous-system support.
   buttons:
     - class: btn btn-primary
@@ -72,7 +75,3 @@ cta:
     - class: btn btn-primary
       label: Request Appointment
       spwidget: true
-    - class: btn btn-secondary
-      label: Contact details
-      href: ./contact/
-      spwidget: false

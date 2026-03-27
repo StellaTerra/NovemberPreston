@@ -1,7 +1,6 @@
-<section class="section hero" aria-labelledby="{{ include.page_data.hero.title_id }}">
-  <div class="container page-grid">
+<section class="section page-top" aria-labelledby="{{ include.page_data.hero.title_id }}">
+  <div class="container page-grid page-grid--intro">
     <div class="page-intro">
-      <p class="eyebrow">{{ include.page_data.hero.eyebrow }}</p>
       <h1 id="{{ include.page_data.hero.title_id }}">{{ include.page_data.hero.title }}</h1>
       {% for paragraph in include.page_data.hero.paragraphs %}
       {{ paragraph | markdownify }}
@@ -19,11 +18,13 @@
 <section class="section surface" aria-labelledby="{{ include.page_data.concepts.title_id }}">
   <div class="container">
     <h2 id="{{ include.page_data.concepts.title_id }}">{{ include.page_data.concepts.title }}</h2>
-    <div class="concept-grid">
+    <div class="concept-list">
       {% for concept in include.page_data.concepts.cards %}
-      <article class="concept-card">
-        {% include image.html image=concept.image asset_prefix=include.asset_prefix %}
-        <div>
+      <article class="concept-row {% cycle 'concept-row--image-left', 'concept-row--image-right' %}">
+        <figure class="media-card media-card--quiet">
+          {% include image.html image=concept.image asset_prefix=include.asset_prefix %}
+        </figure>
+        <div class="section-block">
           <h3>{{ concept.title }}</h3>
           {{ concept.body | markdownify }}
         </div>
@@ -34,8 +35,8 @@
 </section>
 
 <section class="section surface" aria-labelledby="{{ include.page_data.how_it_works.title_id }}">
-  <div class="container page-grid">
-    <article class="list-card">
+  <div class="container copy-grid">
+    <article class="section-block">
       <h2 id="{{ include.page_data.how_it_works.title_id }}">{{ include.page_data.how_it_works.title }}</h2>
       <ul>
         {% for item in include.page_data.how_it_works.items %}
@@ -44,7 +45,7 @@
       </ul>
     </article>
 
-    <article class="callout" aria-labelledby="{{ include.page_data.planning.title_id }}">
+    <article class="section-block section-block--tint" aria-labelledby="{{ include.page_data.planning.title_id }}">
       <h2 id="{{ include.page_data.planning.title_id }}">{{ include.page_data.planning.title }}</h2>
       {% for paragraph in include.page_data.planning.paragraphs %}
       {{ paragraph | markdownify }}

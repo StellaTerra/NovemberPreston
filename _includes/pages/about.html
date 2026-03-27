@@ -1,7 +1,6 @@
-<section class="section hero" aria-labelledby="{{ include.page_data.hero.title_id }}">
-  <div class="container page-grid">
+<section class="section page-top" aria-labelledby="{{ include.page_data.hero.title_id }}">
+  <div class="container page-grid page-grid--intro">
     <div class="page-intro">
-      <p class="eyebrow">{{ include.page_data.hero.eyebrow }}</p>
       <h1 id="{{ include.page_data.hero.title_id }}">{{ include.page_data.hero.title }}</h1>
       {% for paragraph in include.page_data.hero.paragraphs %}
       <p>{{ paragraph }}</p>
@@ -17,8 +16,8 @@
 </section>
 
 <section class="section surface" aria-labelledby="{{ include.page_data.approach.title_id }}">
-  <div class="container page-grid">
-    <article class="list-card">
+  <div class="container copy-grid">
+    <article class="section-block">
       <h2 id="{{ include.page_data.approach.title_id }}">{{ include.page_data.approach.title }}</h2>
       <ul>
         {% for item in include.page_data.approach.items %}
@@ -27,7 +26,7 @@
       </ul>
     </article>
 
-    <article class="callout" aria-labelledby="{{ include.page_data.values.title_id }}">
+    <article class="section-block section-block--tint" aria-labelledby="{{ include.page_data.values.title_id }}">
       <h2 id="{{ include.page_data.values.title_id }}">{{ include.page_data.values.title }}</h2>
       {% for paragraph in include.page_data.values.paragraphs %}
       {{ paragraph | markdownify }}

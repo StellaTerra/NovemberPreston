@@ -17,10 +17,6 @@ hero:
     - class: btn btn-primary
       label: Schedule a consult
       spwidget: true
-    - class: btn btn-secondary
-      label: Explore ecotherapy
-      href: ../ecotherapy/
-      spwidget: false
   image:
     key: about_hero_portrait_vertical
     alt: Therapist November Preston outdoors
@@ -66,7 +62,3 @@ cta:
     - class: btn btn-primary
       label: Request a consult
       spwidget: true
-    - class: btn btn-secondary
-      label: Read FAQ
-      href: ../faq/
-      spwidget: false
