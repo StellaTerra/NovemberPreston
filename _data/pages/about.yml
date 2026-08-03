@@ -1,6 +1,6 @@
 seo:
   title: About November Preston, LMFT | Queer Somatic Therapist
-  description: "Learn about November Preston, LMFT: queer-affirming, trauma-informed somatic therapist offering California telehealth and East Bay ecotherapy options."
+  description: "Learn about November Preston, LMFT: queer-affirming, trauma-informed somatic therapist offering California and Oregon telehealth and East Bay ecotherapy options."
   og_description: "Background, clinical approach, and trainings for November Preston's queer and trans affirming somatic psychotherapy practice."
   twitter_description: "Read about November Preston's approach, values, and training in trauma-informed somatic therapy and ecotherapy."
   social_image_alt: Portrait of therapist November Preston outdoors
@@ -9,10 +9,10 @@ hero:
   eyebrow: About the practice
   title: About November Preston
   paragraphs:
-    - I am a Licensed Marriage and Family Therapist (#119501) supporting queer and trans youth and adults in California. My practice is trauma-informed, relational, and somatic, with care paced to your capacity and goals.
+    - I am a Licensed Marriage and Family Therapist (CA #119501; OR #T2483) supporting queer and trans youth and adults in California and Oregon. My practice is trauma-informed, relational, and somatic, with care paced to your capacity and goals.
     - Therapy with me is collaborative and consent-based. We track patterns in mind, body, and relationship, then build practical tools for regulation while making space for deeper healing.
     - "While I work one-on-one with individuals, I also hold the wider systems shaping each person's life: oppression, exclusion, and support all affect how pain is carried and how healing becomes possible."
-    - My approach is queer-affirming, relational, and anti-oppressive. I do not treat you as broken; we work together to understand adaptive patterns, reduce suffering, and build capacity for choice, connection, and self-trust.
+    - My approach is queer and neurodiversity-affirming, relational, and anti-oppressive. I do not treat you as broken; we work together to understand adaptive patterns, reduce suffering, and build capacity for choice, connection, and self-trust.
   buttons:
     - class: btn btn-primary
       label: Schedule a consult
@@ -28,7 +28,7 @@ approach:
     - Queer and trans centered psychotherapy
     - Somatic and trauma-informed methods
     - Relational, anti-oppressive, and strengths-based lens
-    - Telehealth statewide in California with optional East Bay ecotherapy
+    - Telehealth statewide in California and Oregon with optional East Bay ecotherapy
 values:
   title_id: fit-values-title
   title: Values in session
