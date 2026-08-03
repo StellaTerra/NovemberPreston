@@ -1,16 +1,16 @@
 seo:
-  title: Queer Somatic Therapy in California | November Preston, LMFT
-  description: Queer-affirming, trauma-informed somatic therapy for California adults. Telehealth statewide, with East Bay ecotherapy options and free 20-minute consultations.
-  og_description: Queer and trans affirming somatic psychotherapy with telehealth statewide in California and optional East Bay ecotherapy sessions.
-  twitter_description: Somatic psychotherapy for queer and trans youth and adults across California, with East Bay nature-based session options.
+  title: Queer Somatic Therapy in California and Oregon | November Preston, LMFT
+  description: Queer-affirming, trauma-informed somatic therapy for California youth and adults. Telehealth statewide, with East Bay ecotherapy options and free 20-minute consultations.
+  og_description: Queer and trans affirming somatic psychotherapy with telehealth statewide in California and Oregon and optional East Bay ecotherapy sessions.
+  twitter_description: Somatic psychotherapy for queer and trans youth and adults across California and Oregon, with East Bay nature-based session options.
   social_image_alt: Portrait of therapist November Preston smiling
 hero:
   title_id: home-title
-  eyebrow: Telehealth statewide California • East Bay ecotherapy option
-  title: Queer Somatic Therapy in California
+  eyebrow: Telehealth statewide California and Oregon • East Bay ecotherapy option
+  title: Queer Somatic Therapy in California and Oregon
   title_lines:
     - Queer Somatic
-    - Therapy in California
+    - Therapy in California and Oregon
   subhead: Collaborative psychotherapy for queer and trans adults healing trauma, anxiety, grief, and attachment wounds. Sessions are grounded in consent, body awareness, and practical nervous-system support.
   buttons:
     - class: btn btn-primary
@@ -35,7 +35,7 @@ services:
     - title: Trauma-informed pacing
       body: Work that respects your window of tolerance and centers consent every step of the way.
     - title: Telehealth and ecotherapy
-      body: Meet online statewide in California, with optional East Bay outdoor sessions as a fit.
+      body: Meet online statewide in California and Oregon, with optional East Bay outdoor sessions as a fit.
 nature_band:
   title_id: nature-title
   title: Nature as regulation, reflection, and perspective
@@ -66,7 +66,7 @@ faq_preview:
     - title: Do you offer sliding scale?
       body: Yes, a limited number of reduced-fee spots are reserved based on need and availability.
     - title: Where are sessions held?
-      body: Telehealth is statewide in California, with ecotherapy options in East Bay settings.
+      body: Telehealth is statewide in California and Oregon, with ecotherapy options in East Bay settings.
 cta:
   title_id: home-contact-title
   title: Ready to talk?
