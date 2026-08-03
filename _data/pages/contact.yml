@@ -1,6 +1,6 @@
 seo:
   title: Contact Queer Somatic Therapist in California | November Preston, LMFT
-  description: Contact November Preston, LMFT for queer-affirming somatic therapy in California. Schedule a free 20-minute consult through SimplePractice.
+  description: Contact November Preston, LMFT for queer-affirming somatic therapy in California and Oregon. Schedule a free 20-minute consult through SimplePractice.
   og_description: Request a free consultation through SimplePractice and review direct contact details for the practice.
   twitter_description: Book a consult through SimplePractice or contact the practice by email and phone.
 hero:
@@ -18,8 +18,8 @@ direct:
     - label: Phone
       value: (510) 214-3389
       href: tel:+15102143389
-    - label: Region served
-      value: California (telehealth), East Bay (ecotherapy options)
+    - label: Regions served
+      value: California and Oregon (telehealth), East Bay (ecotherapy options)
   notes:
     - Typical response time is 1-2 business days.
     - If you need immediate support, call or text 988.
