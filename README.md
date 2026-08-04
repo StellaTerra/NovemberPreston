@@ -65,33 +65,59 @@ Template usage:
 
 ## Local Development
 
-### Prerequisites (macOS)
+### Recommended: VS Code Dev Container
+
+The repository includes a development-container configuration with Ruby,
+Bundler, Jekyll, and the GitHub Pages dependency set.
+
+1. Open the repository in VS Code with the Dev Containers extension installed.
+2. Run **Dev Containers: Reopen in Container** from the Command Palette.
+3. Wait for the initial `bundle install` to finish. Jekyll then starts
+   automatically, and VS Code opens the forwarded preview.
+
+The main routes are:
+
+- `http://localhost:4000/`
+- `http://localhost:4000/about/`
+- `http://localhost:4000/ecotherapy/`
+- `http://localhost:4000/faq/`
+- `http://localhost:4000/contact/`
+
+Jekyll logs are written to `/tmp/november-preston-jekyll.log` inside the
+container. If the server is stopped manually, restart it with:
+
+```sh
+bash .devcontainer/start-jekyll.sh
+```
+
+### Native macOS Setup
 
 1. Install modern Ruby:
    - `brew install ruby`
 2. Add Ruby + user gem bin to your shell PATH (zsh):
    - `echo 'export PATH="/opt/homebrew/opt/ruby/bin:$HOME/.gem/ruby/4.0.0/bin:$PATH"' >> ~/.zshrc`
    - `source ~/.zshrc`
-3. Install Jekyll tooling:
-   - `gem install --user-install jekyll webrick --no-document`
+3. Install Bundler:
+   - `gem install --user-install bundler --no-document`
 4. Verify the shell is using the Homebrew Ruby toolchain instead of macOS system Ruby:
    - `ruby --version`
-   - `which jekyll`
+   - `which bundle`
 
-If `jekyll` is still "not found", your current shell probably has not picked up the PATH change yet. Run:
+If `bundle` is still "not found", your current shell probably has not picked up the PATH change yet. Run:
 
 ```sh
 export PATH="/opt/homebrew/opt/ruby/bin:$HOME/.gem/ruby/4.0.0/bin:$PATH"
 ```
 
-Then re-run `ruby --version` and `jekyll --version`.
+Then re-run `ruby --version` and `bundle --version`.
 
 ### Run Dev Server
 
 1. `cd /Users/stellaclemens/november-preston-demo`
 2. `export PATH="/opt/homebrew/opt/ruby/bin:$HOME/.gem/ruby/4.0.0/bin:$PATH"`
-3. `jekyll serve --host 127.0.0.1 --port 4000 --livereload`
-4. Open:
+3. `bundle install`
+4. `bundle exec jekyll serve --host 127.0.0.1 --port 4000 --livereload`
+5. Open:
    - `http://127.0.0.1:4000/`
    - `http://127.0.0.1:4000/about/`
    - `http://127.0.0.1:4000/ecotherapy/`

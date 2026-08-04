@@ -1,0 +1,25 @@
+{
+  "name": "November Preston Jekyll",
+  "image": "mcr.microsoft.com/devcontainers/jekyll:2-bookworm",
+  "forwardPorts": [4000, 35729],
+  "portsAttributes": {
+    "4000": {
+      "label": "Jekyll preview",
+      "onAutoForward": "openPreview"
+    },
+    "35729": {
+      "label": "Jekyll LiveReload",
+      "onAutoForward": "silent"
+    }
+  },
+  "postStartCommand": "bash .devcontainer/start-jekyll.sh",
+  "customizations": {
+    "vscode": {
+      "extensions": [
+        "redhat.vscode-yaml",
+        "Shopify.theme-check-vscode"
+      ]
+    }
+  },
+  "remoteUser": "vscode"
+}
