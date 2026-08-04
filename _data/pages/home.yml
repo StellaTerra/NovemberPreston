@@ -9,8 +9,7 @@ hero:
   eyebrow: Telehealth statewide California and Oregon • East Bay ecotherapy option
   title: Queer Somatic Therapy
   title_lines:
-    - Queer Somatic
-    - Therapy in California and Oregon
+    - Queer Somatic Therapy
   subhead: Collaborative psychotherapy for queer and trans adults healing trauma, anxiety, grief, and attachment wounds. Sessions are grounded in consent, body awareness, and practical nervous-system support.
   buttons:
     - class: btn btn-primary
@@ -19,7 +18,7 @@ hero:
   image:
     key: home_hero_portrait
     alt: Portrait of therapist November Preston smiling
-    caption: 'November Preston, LMFT #119501'
+    caption: 'November Preston, CA LMFT #119501; OR LMFT #T2483'
 services:
   title_id: services-title
   title: Who this care is for
