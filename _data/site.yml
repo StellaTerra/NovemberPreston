@@ -1,5 +1,5 @@
 brand: November Preston, LMFT
-footer_text: "November Preston, LMFT #119501 • Telehealth statewide California • East Bay based"
+footer_text: "November Preston, LMFT • California #119501 • Oregon #T2483 • Telehealth statewide in CA & OR • East Bay based"
 navigation:
   - key: home
     label: Home
@@ -55,6 +55,8 @@ schema:
       areaServed:
         - "@type": State
           name: California
+        - "@type": State
+          name: Oregon
         - "@type": Place
           name: East Bay, San Francisco Bay Area
       serviceType:
@@ -66,7 +68,9 @@ schema:
           contactType: Consultation
           telephone: "+1-510-214-3389"
           email: therapy@novemberpreston.com
-          areaServed: US-CA
+          areaServed:
+            - US-CA
+            - US-OR
           availableLanguage: en
       founder:
         "@id": https://novemberpreston.com/#person
@@ -76,8 +80,8 @@ schema:
       about: AboutPage
       contact: ContactPage
     names:
-      home: Queer Somatic Therapy in California
+      home: Queer Somatic Therapy in California and Oregon
       about: About November Preston, LMFT
       ecotherapy: Ecotherapy in the East Bay
-      faq: Therapy FAQ for California Clients
+      faq: Therapy FAQ for California and Oregon Clients
       contact: Contact and Consultation Scheduling

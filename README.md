@@ -44,7 +44,7 @@ Example `_data/faq.yml`:
 ```yml
 - q: Do you offer virtual sessions?
   a_md: |-
-    Yes. I offer virtual sessions across California.
+    Yes. I offer virtual sessions across California and Oregon.
 
     This includes:
     - Video sessions
