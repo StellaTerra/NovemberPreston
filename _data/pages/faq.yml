@@ -13,7 +13,9 @@ faq:
   title: Common questions and answers
   items:
     - question: How can we meet for sessions?
-      answer: Telehealth is available statewide in California and Oregon by secure video. Ecotherapy sessions in East Bay settings are available after initial sessions, and can be integrated regularly or as needed. Review [East Bay ecotherapy session details](../ecotherapy/) for what to expect.
+      answer: In office sessions are available on Tuesdays.
+      Telehealth is available statewide in California and Oregon by secure video. 
+      Ecotherapy sessions in East Bay settings are available after initial sessions, and can be integrated regularly or as needed. Review [East Bay ecotherapy session details](../ecotherapy/) for what to expect.
     - question: What are your rates?
       answer:  I use a three-tier fee system designed to make lower-fee therapy available while supporting a sustainable practice:
 
@@ -27,7 +29,10 @@ If you are unsure which tier fits your circumstances, we can discuss it during y
     - question: Do you take insurance?
       answer: Insurance is not billed directly. A superbill can be provided for out-of-network reimbursement. Please check your specific mental health benefits with your plan.
     - question: Where are you located?
-      answer: The practice is based in the East Bay of the San Francisco Bay Area. Telehealth is available statewide in California and Oregon, and ecotherapy sessions are offered in East Bay locations.
+      answer: The practice is based in the East Bay of the San Francisco Bay Area. 
+      In person sessions happen in the Oakland Chinatown District, about 5 minutes walk from Lake Merritt BART
+      Telehealth is available statewide in California and Oregon 
+      Ecotherapy sessions offered in several outdoor East Bay locations
 cta:
   title_id: faq-next-title
   title: Still have questions?
