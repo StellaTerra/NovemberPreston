@@ -1,0 +1,44 @@
+services:
+  website:
+    image: mcr.microsoft.com/devcontainers/jekyll:2-bookworm
+    init: true
+    working_dir: /workspace
+    environment:
+      BUNDLE_FROZEN: "true"
+      BUNDLE_PATH: /usr/local/bundle
+      JEKYLL_ENV: development
+      JEKYLL_CACHE_DIR: /tmp/november-preston-jekyll-cache
+    volumes:
+      - type: bind
+        source: .
+        target: /workspace
+        read_only: true
+      - type: volume
+        source: bundle-cache
+        target: /usr/local/bundle
+    ports:
+      - "127.0.0.1:4100:4100"
+      - "127.0.0.1:35730:35730"
+    command:
+      - bash
+      - -lc
+      - |
+        if ! bundle check; then
+          bundle install --jobs 4 --retry 3
+        fi
+        exec bundle exec jekyll serve \
+          --host 0.0.0.0 \
+          --port 4100 \
+          --livereload \
+          --livereload-port 35730 \
+          --force_polling \
+          --destination /tmp/november-preston-site
+    healthcheck:
+      test: ["CMD", "curl", "--fail", "--silent", "http://127.0.0.1:4100/"]
+      interval: 5s
+      timeout: 3s
+      retries: 20
+      start_period: 30s
+
+volumes:
+  bundle-cache:

@@ -1,0 +1,21 @@
+#!/usr/bin/env bash
+set -euo pipefail
+
+readonly script_dir="$(cd -- "$(dirname -- "${BASH_SOURCE[0]}")" && pwd)"
+readonly repo_root="$(cd -- "${script_dir}/.." && pwd)"
+readonly compose_project="november-preston-preview"
+
+cd "${repo_root}"
+
+if ! command -v docker >/dev/null 2>&1; then
+  echo "Docker is not installed; there is no preview to stop."
+  exit 0
+fi
+
+if ! docker info >/dev/null 2>&1; then
+  echo "Docker is not running; the website preview is already stopped."
+  exit 0
+fi
+
+docker compose --project-name "${compose_project}" down --remove-orphans
+echo "Website preview stopped."

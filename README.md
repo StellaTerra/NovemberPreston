@@ -65,6 +65,28 @@ Template usage:
 
 ## Local Development
 
+### Recommended for the Site Owner: Codex + Docker Desktop
+
+The owner-facing workflow does not require VS Code, Homebrew, or a native Ruby
+installation. Open this repository in the Codex desktop app and use the project
+actions in its toolbar:
+
+- **Preview website** starts Docker Desktop when necessary and serves the site
+  at `http://127.0.0.1:4100/`.
+- **Check website** performs a strict Jekyll build and checks every public route.
+- **Stop preview** stops the owner-facing preview.
+
+The same commands can be run from a terminal when troubleshooting:
+
+```sh
+./scripts/preview
+./scripts/check
+./scripts/stop-preview
+```
+
+This preview deliberately uses ports `4100` and `35730`, so it can run at the
+same time as the VS Code dev container on ports `4000` and `35729`.
+
 ### Recommended: VS Code Dev Container
 
 The repository includes a development-container configuration with Ruby,

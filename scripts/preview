@@ -1,0 +1,56 @@
+#!/usr/bin/env bash
+set -euo pipefail
+
+readonly script_dir="$(cd -- "$(dirname -- "${BASH_SOURCE[0]}")" && pwd)"
+readonly repo_root="$(cd -- "${script_dir}/.." && pwd)"
+readonly compose_project="november-preston-preview"
+readonly preview_url="http://127.0.0.1:4100/"
+readonly docker_max_attempts=90
+readonly preview_max_attempts=180
+
+cd "${repo_root}"
+
+if ! command -v docker >/dev/null 2>&1; then
+  echo "Docker is not installed. Install Docker Desktop, then try again." >&2
+  exit 1
+fi
+
+if ! docker compose version >/dev/null 2>&1; then
+  echo "Docker Compose is unavailable. Start or update Docker Desktop, then try again." >&2
+  exit 1
+fi
+
+if ! docker info >/dev/null 2>&1; then
+  if [[ "$(uname -s)" == "Darwin" ]] && [[ -d "/Applications/Docker.app" ]]; then
+    echo "Starting Docker Desktop..."
+    open -ga Docker
+
+    for _ in $(seq 1 "${docker_max_attempts}"); do
+      if docker info >/dev/null 2>&1; then
+        break
+      fi
+      sleep 2
+    done
+  fi
+fi
+
+if ! docker info >/dev/null 2>&1; then
+  echo "Docker is not running. Open Docker Desktop, wait for it to finish starting, and try again." >&2
+  exit 1
+fi
+
+echo "Starting the website preview..."
+docker compose --project-name "${compose_project}" up --detach --remove-orphans
+
+for _ in $(seq 1 "${preview_max_attempts}"); do
+  if curl --fail --silent "${preview_url}" >/dev/null 2>&1; then
+    echo "Website preview is ready: ${preview_url}"
+    echo "Open that address in the Codex browser to review the site."
+    exit 0
+  fi
+  sleep 1
+done
+
+echo "The preview did not become ready. Recent container output:" >&2
+docker compose --project-name "${compose_project}" logs --tail 120 website >&2
+exit 1

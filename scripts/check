@@ -1,0 +1,37 @@
+#!/usr/bin/env bash
+set -euo pipefail
+
+readonly script_dir="$(cd -- "$(dirname -- "${BASH_SOURCE[0]}")" && pwd)"
+readonly repo_root="$(cd -- "${script_dir}/.." && pwd)"
+readonly compose_project="november-preston-preview"
+readonly preview_origin="http://127.0.0.1:4100"
+readonly routes=(
+  "/"
+  "/about/"
+  "/ecotherapy/"
+  "/faq/"
+  "/contact/"
+)
+
+cd "${repo_root}"
+
+"${script_dir}/preview"
+
+echo "Building the site with strict front-matter checks..."
+docker compose --project-name "${compose_project}" run --rm --no-deps website \
+  bash -lc '
+    if ! bundle check; then
+      bundle install --jobs 4 --retry 3
+    fi
+    bundle exec jekyll build \
+      --strict_front_matter \
+      --destination /tmp/november-preston-check
+  '
+
+echo "Checking public routes..."
+for route in "${routes[@]}"; do
+  curl --fail --silent --show-error --output /dev/null "${preview_origin}${route}"
+  echo "  OK ${route}"
+done
+
+echo "Website checks passed. Preview: ${preview_origin}/"
