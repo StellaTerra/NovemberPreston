@@ -418,6 +418,14 @@ ul {
   border-color: var(--line-strong);
 }
 
+.fees-tiers .card {
+  background: var(--surface-soft);
+}
+
+.fees-rationale {
+  max-width: 68ch;
+}
+
 .faq-wrap {
   max-width: 56rem;
 }
@@ -441,6 +449,10 @@ ul {
 .faq-item > div {
   padding: 0.75rem 0.95rem 0.95rem;
   border-top: 1px solid var(--line);
+}
+
+.faq-item ul + p {
+  margin-top: 1rem;
 }
 
 .integration-note,

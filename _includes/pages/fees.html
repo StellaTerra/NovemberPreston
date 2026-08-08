@@ -1,0 +1,22 @@
+<section class="section page-top" aria-labelledby="{{ include.page_data.hero.title_id }}">
+  <div class="container page-intro">
+    <h1 id="{{ include.page_data.hero.title_id }}">{{ include.page_data.hero.title }}</h1>
+    {{ include.page_data.hero.body | markdownify }}
+  </div>
+</section>
+
+<section class="section surface fees-tiers" aria-labelledby="{{ include.page_data.tiers.title_id }}">
+  <div class="container">
+    <h2 id="{{ include.page_data.tiers.title_id }}">{{ include.page_data.tiers.title }}</h2>
+    {% include card-grid.html cards=include.page_data.tiers.cards %}
+  </div>
+</section>
+
+<section class="section surface-strong" aria-labelledby="{{ include.page_data.rationale.title_id }}">
+  <div class="container fees-rationale">
+    <h2 id="{{ include.page_data.rationale.title_id }}">{{ include.page_data.rationale.title }}</h2>
+    {% for paragraph in include.page_data.rationale.paragraphs %}
+    {{ paragraph | markdownify }}
+    {% endfor %}
+  </div>
+</section>

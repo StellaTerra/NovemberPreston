@@ -1,0 +1,30 @@
+seo:
+  title: Therapy Fees | November Preston, LMFT
+  description: Learn about November Preston's three-tier therapy fee structure, with Community Care, Sustainable, and Solidarity fee options.
+  og_description: Learn how the three-tier fee structure supports equitable access to therapy and a sustainable practice.
+  twitter_description: Review Community Care, Sustainable, and Solidarity therapy fee options.
+hero:
+  title_id: fees-title
+  title: Fee Structure
+  body: I use a three-tier fee system designed to make lower-fee therapy available while supporting a sustainable practice.
+tiers:
+  title_id: fee-tiers-title
+  title: Fee Tiers
+  cards:
+    - title: Community Care — $110
+      body: Community Care helps ensure that financial barriers do not prevent people from accessing therapy.
+    - title: Sustainable Fee — $220
+      body: The Sustainable Fee is the amount that would sustain my practice if every client paid the same fee.
+    - title: Solidarity — $330
+      body: Solidarity helps make Community Care appointments possible by using greater financial capacity to support broader access to therapy.
+rationale:
+  title_id: three-tier-fee-system-title
+  title: Why I Use a Three-Tier Fee System
+  paragraphs:
+    - I believe mental and emotional care are fundamental needs, while access to resources is deeply unequal. I use a three-tier fee system to make access to care more equitable. This allows me to offer lower-fee therapy while maintaining a sustainable practice.
+    - Within this model, clients with greater financial capacity help make Community Care appointments available to clients with fewer resources. The three tiers depend on one another. For the model to work, my practice needs participation across all three fee levels.
+    - Financial capacity is about more than current income. It is also shaped by wealth, debts and other obligations, financial security, and the historical advantages and barriers that affect a person's or family's ability to build resources. Two people may have the same income but have very different experiences when a financial emergency arises.
+    - Each tier is an intended part of the system. Choosing Community Care does not mean paying less than your fair share, and the Sustainable Fee is not the right fee for everyone. I ask clients to consider their overall financial circumstances when choosing a tier. If you are unsure which tier fits your situation, let me know. We can consider it together and find an equitable fee within the model.
+    - >-
+      For a more detailed framework for thinking about class, wealth, and financial security, I recommend Resource Generation's
+      [Breakdown of Class Characteristics and Income Brackets](https://resourcegeneration.org/breakdown-of-class-characteristics-income-brackets/).

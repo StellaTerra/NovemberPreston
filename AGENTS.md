@@ -26,7 +26,7 @@
 ## Verification
 
 - After changing site content or presentation, run `./scripts/check`.
-- Review every affected route in the local browser. For shared layout, navigation, footer, or stylesheet changes, review all five public routes.
+- Review every affected route in the local browser. For shared layout, navigation, footer, or stylesheet changes, review all six public routes.
 - Treat YAML, Liquid, Jekyll, missing assets, broken navigation, obvious responsive regressions, and accessibility regressions as failures to fix before publishing.
 - Summarize what was checked in user-facing language.
 

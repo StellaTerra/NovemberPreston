@@ -9,6 +9,7 @@ readonly routes=(
   "/"
   "/about/"
   "/ecotherapy/"
+  "/fees/"
   "/faq/"
   "/contact/"
 )

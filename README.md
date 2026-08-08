@@ -6,11 +6,12 @@ This repo is moving to a Jekyll-driven content workflow so that non-technical ed
 
 ## Scope
 
-The site covers five core routes:
+The site covers six core routes:
 
 - `/` (Home)
 - `/about/`
 - `/ecotherapy/`
+- `/fees/`
 - `/faq/`
 - `/contact/`
 
@@ -102,6 +103,7 @@ The main routes are:
 - `http://localhost:4000/`
 - `http://localhost:4000/about/`
 - `http://localhost:4000/ecotherapy/`
+- `http://localhost:4000/fees/`
 - `http://localhost:4000/faq/`
 - `http://localhost:4000/contact/`
 
@@ -143,6 +145,7 @@ Then re-run `ruby --version` and `bundle --version`.
    - `http://127.0.0.1:4000/`
    - `http://127.0.0.1:4000/about/`
    - `http://127.0.0.1:4000/ecotherapy/`
+   - `http://127.0.0.1:4000/fees/`
    - `http://127.0.0.1:4000/faq/`
    - `http://127.0.0.1:4000/contact/`
 

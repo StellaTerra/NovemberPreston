@@ -49,7 +49,22 @@ schema:
       "@id": https://novemberpreston.com/#service
       name: November Preston, LMFT
       url: https://novemberpreston.com/
-      description: Queer-affirming, trauma-informed somatic psychotherapy with telehealth across California and Oregon and ecotherapy options in the East Bay.
+      description: Queer, trans, LGBTQIA+, neurodiversity-affirming, and trauma-informed somatic psychotherapy for youth and adults, including neurodivergent people with ADHD, Autism, or AuDHD, plus East Bay ecotherapy.
+      keywords:
+        - queer-affirming therapy
+        - trans-affirming therapy
+        - LGBT therapy
+        - LGBTQ therapy
+        - LGBTQIA+ therapy
+        - neurodiversity-affirming therapy
+        - neurodivergent therapy
+        - neuroqueer therapy
+        - ADHD therapy
+        - Autism therapy
+        - AuDHD therapy
+        - trauma therapy
+        - trauma-informed therapy
+        - ecotherapy
       telephone: "+1-510-214-3389"
       email: therapy@novemberpreston.com
       areaServed:
@@ -62,6 +77,8 @@ schema:
       serviceType:
         - Somatic psychotherapy
         - Trauma-informed therapy
+        - LGBTQIA+ affirming therapy
+        - Neurodiversity-affirming therapy
         - Ecotherapy
       contactPoint:
         - "@type": ContactPoint
@@ -83,5 +100,6 @@ schema:
       home: Queer Somatic Therapy in California and Oregon
       about: About November Preston, LMFT
       ecotherapy: Ecotherapy in the East Bay
+      fees: Therapy Fee Structure
       faq: Therapy FAQ for California and Oregon Clients
       contact: Contact and Consultation Scheduling
